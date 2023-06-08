@@ -1,2 +1,2 @@
-# obsedian_notes
-notes made using obsedian
+# obsidian_notes
+notes made using obsidian

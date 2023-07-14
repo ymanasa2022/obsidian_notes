@@ -1,5 +1,6 @@
-# obsidian_notes
+## obsidian_notes
 notes made using obsidian
-
 **bold** 
+
+
 

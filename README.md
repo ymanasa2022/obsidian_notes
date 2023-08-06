@@ -26,17 +26,12 @@ For iPad notes, I created a separate branch called ipad_notes
 	- ymanasa2022
 	- use personal access token generated on GitHub under developer settings (ipad_token)
 	
-### *To merge with macbook_notes branch*
-No reason to merge with main branch 
-Always commit changes on ipad, pull on laptop and make changes 
-Only merging README updates with main
+### *To merge with main branch*
+Always commit changes on ipad, pull on laptop and make changes on the same ipad_notes branch 
+
 [git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)
-1.  `git checkout macbook_notes`
+1.  `git checkout main`
 	- WARNING: You have to commit and push changes on ipad_notes branch before checking out macbook_notes branch otherwise all changes on ipad_notes will be overwritten by whatever is in macbook_notes 
-2. `git commit -m ‘merging ipad_notes with macbook_notes’ `
+2. `git commit -m ‘merging ipad_notes with laptop’ `
 3. `git merge ipad_notes`
-
-## **For syncing with MacBook** 
-
-
-
+4. `git push`

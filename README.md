@@ -5,10 +5,10 @@ All subjects are divided into sub folders in this vault.
 A new vault for each sub folder is not created.
 Everything should be viewable in my git repo: obsidian_notes
 
-## *For syncing with iPad*
+## **For syncing with iPad**
 I followed [these](https://gist.github.com/DannyQuah/f686c0e43b741468e12515cd79017489) instructions 
 For iPad notes, I created a separate branch called ipad_notes
-### Normal work cycle 
+### *Normal work cycle* 
 1. Go to iPad > iSH
 2. cd /mnt/ymanasa/Obsidian/obsidian_notes
 	- Obsidian/ is not a git repo. obsidian_notes/ is the git repo 
@@ -26,7 +26,7 @@ For iPad notes, I created a separate branch called ipad_notes
 	- ymanasa2022
 	- use personal access token generated on GitHub under developer settings (ipad_token)
 	
-#### To merge with macbook_notes branch 
+#### *To merge with macbook_notes branch* 
 No reason to merge with main branch 
 Always commit changes on ipad, pull on laptop and make changes 
 Only merging README updates with main
@@ -35,7 +35,7 @@ Only merging README updates with main
 	- WARNING: You have to commit and push changes on ipad_notes branch before checking out macbook_notes branch otherwise all changes on ipad_notes will be overwritten by whatever is in macbook_notes 
 3. git merge ipad_notes
 
-## *For syncing with MacBook* 
+## **For syncing with MacBook** 
 
 
 

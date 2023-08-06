@@ -15,6 +15,9 @@ For iPad notes, I created a separate branch called ipad_notes
 3. git pull if needed (will need to if I make changes on laptop and git commit to main branch)
 4. Work on iPad > Obsidian 
 5. When done iPad > iSH, **git add, git commit -m ‘commit msg’, git push** to push to ipad_notes branch 
+6. Username and password:
+	- ymanasa2022
+	- use personal access token generated on GitHub under developer settings (ipad_token)
 Need to git merge when changes on laptop or vice versa are made 
 
 ## *For syncing with MacBook* 

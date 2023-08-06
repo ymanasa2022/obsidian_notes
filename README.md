@@ -22,7 +22,7 @@ For iPad notes, I created a separate branch called ipad_notes
 1.  git checkout main 
 	- You have to commit and push changes on ipad_notes branch before checking out main branch otherwise all changes on ipad_notes will be overwritten by whatever is in main
 2. git merge ipad_notes
-
+Testing 
 ## *For syncing with MacBook* 
 
 

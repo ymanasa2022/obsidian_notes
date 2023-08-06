@@ -6,7 +6,7 @@ A new vault for each sub folder is not created.
 Everything should be viewable in my git repo: obsidian_notes
 
 ## *For syncing with iPad*
-I followed these instructions: https://gist.github.com/DannyQuah/f686c0e43b741468e12515cd79017489 
+I followed [these](https://gist.github.com/DannyQuah/f686c0e43b741468e12515cd79017489) instructions 
 For iPad notes, I created a separate branch called ipad_notes
 ### Normal work cycle 
 1. Go to iPad > iSH
@@ -18,7 +18,10 @@ For iPad notes, I created a separate branch called ipad_notes
 6. Username and password:
 	- ymanasa2022
 	- use personal access token generated on GitHub under developer settings (ipad_token)
-Need to git merge when changes on laptop or vice versa are made 
+#### To merge with main [git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+1.  git checkout main 
+	- You have to commit and push changes on ipad_notes branch before checking out main branch otherwise all changes on ipad_notes will be overwritten by whatever is in main
+2. git merge ipad_notes
 
 ## *For syncing with MacBook* 
 

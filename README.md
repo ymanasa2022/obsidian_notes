@@ -35,3 +35,4 @@ Always commit changes on ipad, pull on laptop and make changes on the same ipad_
 2. `git commit -m ‘merging ipad_notes with laptop’ `
 3. `git merge ipad_notes`
 4. `git push`
+

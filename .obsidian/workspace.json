@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "##",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -147,9 +148,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8a7d369a84e7ccef",
+  "active": "a4447216bd87383e",
   "lastOpenFiles": [
-    "2023-07-10.md",
-    "README.md"
+    "README.md",
+    "2023-07-10.md"
   ]
 }

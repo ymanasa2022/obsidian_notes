@@ -37,3 +37,15 @@ Always commit changes on ipad, pull on laptop and make changes on the same ipad_
 3. `git merge ipad_notes`
 4. `git push`
 
+## For syncing with MacBook 
+### ***Cloning the obisidian_notes repo*** 
+1. Navigate to directory where you want your repo 
+2. `git clone https://github.com/ymanasa2022/obsidian_notes`
+
+### *Normal work cycle* 
+1. Go to terminal
+2. Navigate to the repo (/Users/manasayadavalli/Desktop/obsidian_notes)
+3. `git pull` if needed 
+4. make changes in obisidian 
+5. `git commit -m 'msg'`
+6. `git push`

@@ -50,7 +50,7 @@ Always commit changes on ipad, pull on laptop and make changes on the same ipad_
 1. Go to terminal
 2. Navigate to the repo (/Users/manasayadavalli/Desktop/obsidian_notes)
 3. `git pull` if changes were made and committed+pushed from ipad 
-	1. use `git status` to check how many commits we are behind on the local ipad_notes branch on your MacBook 
+	- can’t use `git status` to check how many commits we are behind the remote ipad_notes branch 
 4. make changes in Obisidian on MacBook
 5. `git commit -m 'msg'`
 6. `git push`

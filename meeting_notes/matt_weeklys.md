@@ -1,6 +1,6 @@
 # Aug 14, 2023 (Mon)
 
-## Things discussed: 
+## Things discussed 
 1. To make the most of grad school
 	- go to at least one seminar per week
 	- go to ALL DCMB department events
@@ -16,20 +16,34 @@
 	- receptor flexibility
 	- handling metals, covalent interactions
 	- quantum chemistry: orbits, charge transfer etc 
+4. Future Directions:
+	- targeting proteins with cofactors in Active Site or proteins with post translational modifications 
+	- pre-training: clustering of info in interaction matrices of many receptors and ligands 
+		- good clusters can be further refined using high resolution simulations 
+		- lower quality clusters can be further investigated using computationally cheaper simulations
+5. TgCPL 
+	- creating a docking model to perform high through put screening of ligands against Toxo cathepsins 
+	- model needs to perform well with existing ligands that have been experimentally docking to human cathepsin proteins in order to use it to predict ligand affinity to the Toxo Cathepsin 
+	- curation of human cathepsin data is done in TgCPL activity sheet
+6. Broader Qs plus goals
+	- what are the controls, why are we testing, what are we testing, here's the baseline, what is the experiment, what did we find, what does this mean 
+	- help biologists and chemistry to do docking themselves instead of needing an expert
 	
-## To do:
+## To do for the week
 1. Administrative
 	- [x] set up obsidian on macbook and ipad
 	- [x] update calendar with grant dates
-	- [ ] go through onboarding doc 
+	- [x] go through onboarding doc 
 	- [x] sign up for mentor mentee workshop 
 	- [x] send itemized bill from apple
-	- [ ] add yourself to appropriate mailing lists
+	- [x] add yourself to appropriate mailing lists
 	- [ ] share this github repo with Matt 
+		- [ ] need to change visibility of the repo. can't seem to figure that out yet.
+	- [x] cancel apple macbook order
 1. Readings
 	- **TgCPL**
-		- [ ] [Pogorzelska et al. 2018](https://pubmed.ncbi.nlm.nih.gov/29870804/) 
-			*Cysteine cathepsins as a prospective target for anticancer therapies—current progress and prospects*
+		- [ ] [[pogorzelska_2018]] 
+			[*Cysteine cathepsins as a prospective target for anticancer therapies—current progress and prospects*](https://pubmed.ncbi.nlm.nih.gov/29870804/)
 		- [ ] [Larson et al. 2009](https://www.jbc.org/article/S0021-9258(20)38515-X/fulltext)
 			*Toxoplasma gondii Cathepsin L Is the Primary Target of the Invasion-inhibitory Compound Morpholinurea-leucyl-homophenyl-vinyl Sulfone Phenyl*
 		- [ ] [Bender et al. 2021](https://www.nature.com/articles/s41596-021-00597-z](https://www.nature.com/articles/s41596-021-00597-z)
@@ -58,5 +72,8 @@
 
 
 # Aug 16, 2023 (Wed)
-## Questions?
+## Questions
 1. how to pay tuition? due on aug 30th 
+##  continue above tasks till Aug 23, 2023  
+
+# Aug 23, 2023 (Wed)

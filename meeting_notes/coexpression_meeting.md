@@ -18,5 +18,5 @@
 	- bulk rna seq done for each sample 
 
 #### Decision Tree 
-Run proteome through decision tree to understand structure availability of proteins in Toxo Proteome 
+[Run proteome through decision tree to understand structure availability of proteins in Toxo Proteome](toxo_fxn_pred.md) 
 

@@ -1,3 +1,4 @@
+A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 # Aug 14, 2023 (Mon)
 
 ## Things discussed 
@@ -37,17 +38,17 @@
 	- [x] sign up for mentor mentee workshop 
 	- [x] send itemized bill from apple
 	- [x] add yourself to appropriate mailing lists
-	- [ ] share this github repo with Matt 
-		- [ ] need to change visibility of the repo. can't seem to figure that out yet.
+	- [x] share this github repo with Matt 
+		- [x] need to change visibility of the repo. can't seem to figure that out yet.
 	- [x] cancel apple macbook order
 	- [ ] go to 1 seminar (Aug 18, Fri 10 am Protease in Action)
 	- [ ] get keys to building room
 	
 2. Readings
 	- **TgCPL**
-		- [ ] [[pogorzelska_2018]] 
+		- [x] [[pogorzelska_2018]] 
 			[*Cysteine cathepsins as a prospective target for anticancer therapies—current progress and prospects*](https://pubmed.ncbi.nlm.nih.gov/29870804/)
-		- [ ] [Larson et al. 2009](https://www.jbc.org/article/S0021-9258(20)38515-X/fulltext)
+		- [x] [Larson et al. 2009](https://www.jbc.org/article/S0021-9258(20)38515-X/fulltext)
 			*Toxoplasma gondii Cathepsin L Is the Primary Target of the Invasion-inhibitory Compound Morpholinurea-leucyl-homophenyl-vinyl Sulfone Phenyl*
 		- [ ] [Bender et al. 2021](https://www.nature.com/articles/s41596-021-00597-z](https://www.nature.com/articles/s41596-021-00597-z)
 			*A practical guide to large-scale docking*
@@ -58,11 +59,11 @@
 			*State of the Art Iterative Docking with Logistic Regression and Morgan Fingerprints*
 		- [ ] [Adeshina et al. 2020](https://www.pnas.org/doi/full/10.1073/pnas.2000585117](https://www.pnas.org/doi/full/10.1073/pnas.2000585117) 
 			*Machine learning classification can reduce false positives in structure-based virtual screening*
-	- Make progress on these books
+	- Books
 		- [ ] *Thanks for the Feedback* by Douglas Stone & Sheila Heen 
-		- [ ] *Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor* by Virginia Eubanks
+	
 3. Computing 
-	 - [ ] run toxo gondii proteome through decision tree 
+	 - [ ] run toxo gondii proteome through decision tree (2)
 	 - [ ] graph decision tree results
 
 4. **Meetings**
@@ -88,7 +89,8 @@
 	- Time:  2pm-3pm (refreshments at 1:45pm)
 	- Presenter:  Habib Hamidi, “Exploratory Analysis of High Dimensional Biomarker Data to Understand Molecular Heterogeneity and  Inform Novel Precision Medicine Based Clinical Trial Design”
 	- THSL Room 2903 or Zoom 
-4. Calculus 
+4. *Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor* by Virginia Eubanks
+5. Calculus 
 	- [ ] Unit 3
 	- [ ] Unit 4
 	- [ ] Unit 5

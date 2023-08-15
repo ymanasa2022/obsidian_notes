@@ -1,3 +1,4 @@
+## Aug 15, 2023 (Tues)
 ### Using Co-Expression to Get Gene Function Predictions 
 - what do genes do? answered using GO terms 
 - if expression of a group of genes is correlated, the genes might be involved in the same process

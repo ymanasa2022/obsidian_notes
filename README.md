@@ -1,9 +1,5 @@
 # obsidian_notes
-**notes made using obsidian**
-
-All subjects are divided into sub folders in this vault.
-A new vault for each sub folder is not created.
-Everything should be viewable in my git repo: obsidian_notes
+**instructions on how to sync notes made on Obsidian with GitHub**
 
 ## **For syncing with iPad**
 I followed [these](https://gist.github.com/DannyQuah/f686c0e43b741468e12515cd79017489) instructions 

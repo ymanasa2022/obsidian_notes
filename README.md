@@ -32,7 +32,7 @@ I created a separate branch called ipad_notes
 	- use personal access token generated on GitHub under developer settings (ipad_token)
 	
 ### *To merge with main branch*
-Always commit changes on ipad, pull on laptop and make changes on the same ipad_notes branch. There's no need to merge with main when making notes other than for changes made to the README.md  
+Always commit changes on ipad, pull on laptop and make changes on the same ipad_notes branch. There's no need to merge with main every time notes are made other than for changes made to the README.md  
 [git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)
 1.  `git checkout main`
 	- WARNING: You have to commit and push changes on ipad_notes branch before checking out macbook_notes branch otherwise all changes on ipad_notes will be overwritten by whatever is in macbook_notes 

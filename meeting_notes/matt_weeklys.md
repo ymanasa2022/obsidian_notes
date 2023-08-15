@@ -5,27 +5,27 @@
 	- go to at least one seminar per week
 	- go to ALL DCMB department events
 	- go to at least one big conference per year 
-1. NSF GRFP grant
+2. NSF GRFP grant
 	-  October 16th, 2023 deadline
 	- Funds 3 years of research
 	- Have a draft in a month (Sept 15 draft deadline).
-2. BIDS-TP training grant
+3. BIDS-TP training grant
 	- May 1st, 2024 deadline
-3. Important Docking issues: in which situations will we need to get accurate simulations of these issues and which ones can we skip to speed up simulations/computations?
+4. Important Docking issues: in which situations will we need to get accurate simulations of these issues and which ones can we skip to speed up simulations/computations?
 	- water modeling: might be done using diffusion models
 	- receptor flexibility
 	- handling metals, covalent interactions
 	- quantum chemistry: orbits, charge transfer etc 
-4. Future Directions:
+5. Future Directions:
 	- targeting proteins with cofactors in Active Site or proteins with post translational modifications 
 	- pre-training: clustering of info in interaction matrices of many receptors and ligands 
 		- good clusters can be further refined using high resolution simulations 
 		- lower quality clusters can be further investigated using computationally cheaper simulations
-5. TgCPL 
+6. TgCPL 
 	- creating a docking model to perform high through put screening of ligands against Toxo cathepsins 
 	- model needs to perform well with existing ligands that have been experimentally docking to human cathepsin proteins in order to use it to predict ligand affinity to the Toxo Cathepsin 
 	- curation of human cathepsin data is done in TgCPL activity sheet
-6. Broader Qs plus goals
+7. Broader Qs plus goals
 	- what are the controls, why are we testing, what are we testing, here's the baseline, what is the experiment, what did we find, what does this mean 
 	- help biologists and chemistry to do docking themselves instead of needing an expert
 	
@@ -40,7 +40,10 @@
 	- [ ] share this github repo with Matt 
 		- [ ] need to change visibility of the repo. can't seem to figure that out yet.
 	- [x] cancel apple macbook order
-1. Readings
+	- [ ] go to 1 seminar (Aug 18, Fri 10 am Protease in Action)
+	- [ ] get keys to building room
+	
+2. Readings
 	- **TgCPL**
 		- [ ] [[pogorzelska_2018]] 
 			[*Cysteine cathepsins as a prospective target for anticancer therapies—current progress and prospects*](https://pubmed.ncbi.nlm.nih.gov/29870804/)
@@ -55,25 +58,46 @@
 			*State of the Art Iterative Docking with Logistic Regression and Morgan Fingerprints*
 		- [ ] [Adeshina et al. 2020](https://www.pnas.org/doi/full/10.1073/pnas.2000585117](https://www.pnas.org/doi/full/10.1073/pnas.2000585117) 
 			*Machine learning classification can reduce false positives in structure-based virtual screening*
-	- Books
+	- Make progress on these books
 		- [ ] *Thanks for the Feedback* by Douglas Stone & Sheila Heen 
 		- [ ] *Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor* by Virginia Eubanks
-3. **Meetings**
-	- [ ] *Aug 15 Tues*
+3. Computing 
+	 - [ ] run toxo gondii proteome through decision tree 
+	 - [ ] graph decision tree results
+
+4. **Meetings**
+	- [x] *Aug 15 Tues*
 		- co-expression for Toxo 
 		- 10:15 am
 		- 5740 MSII 
-4. Calculus 2
+	- [ ] *Aug 16 Wed*
+		- weekly one-on-one with Matt
+		- 1:00 pm 
+5. Calculus 
+	Calc 2
 	- [ ] Unit 6
-5. Calculus 3
+	Calc 3 
 	- [ ] Unit 1
 	- [ ] Unit 2
+	
+## To do for next week
+1. GRFP grant brainstorming
+2. Readings not done this week 
+3. Go to seminar
+	- Date:  Thu 24 Aug
+	- Time:  2pm-3pm (refreshments at 1:45pm)
+	- Presenter:  Habib Hamidi, “Exploratory Analysis of High Dimensional Biomarker Data to Understand Molecular Heterogeneity and  Inform Novel Precision Medicine Based Clinical Trial Design”
+	- THSL Room 2903 or Zoom 
+4. Calculus 
 	- [ ] Unit 3
-
+	- [ ] Unit 4
+	- [ ] Unit 5
 
 # Aug 16, 2023 (Wed)
+
 ## Questions
 1. how to pay tuition? due on aug 30th 
-##  continue above tasks till Aug 23, 2023  
+## Things discussed 
+
 
 # Aug 23, 2023 (Wed)

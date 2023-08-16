@@ -1,7 +1,6 @@
 ## *Cysteine cathepsins as a prospective target for anticancer therapies—current progress and prospects*
-### Lit Review 
 
-#### Relevance
+### Relevance
 -cysteine cathepsins can be used as a prospective target for anticancer therapies 
 -**CTS** (Cysteine Cathepsins) have been highly up-regulated in a wide variety of cancer types 
 -neoplastic progression have revealed secretion of proteases in tumor cells 
@@ -9,7 +8,7 @@
 -natural CTS inhibitors (CTSsis-- ex, cystatins) are down regulated in cancers 
 -CTS are secreted by tumor cells
 
-#### Intro 
+### Intro 
 -CTS is part of cysteine proteases (CP)
 -CPs belong to hydrolases
 -They are cysteine proteases 
@@ -19,29 +18,29 @@
 -in mammals: lysosomal cathepsins. 11 identified in humans (B, C, F, H, L, K, O, S, V,  X, W)
 -structures [solved for everything except](gaps_ideas.md#pogorzelska_2018#gap1) lysosomal cathepsins O and W 
 
-#### Roles
+### Roles
 -nonsepcific protein turnover within endolysosomal pathway AKA lysosomal protein degradation
 -highly specialized roles like tissue homeostasis 
 -proliferation and growth of cancer cells 
 
-#### Location 
+### Location 
 -when C1s are in the endosomal-lysosomal compartment, the reducing (acidic) environment prevents oxidation of the thiol group in its AS and thus help activation of cathepsins 
 -CTS are expressed with tissue and cell specificity and they contribute to protein degradation and turnover
 -exception: cathepsin S can process and present antigens in less acidic endosomal compartments  
 -can also be in nucleus, cell membrane, cystol
 -secreted into extracellular environment by tumor cells (contributes to cancer progression)
 
-#### Activation & Inhibition
+### Activation & Inhibition
 -regulation of CTS is done by zymogen activation, pH, small-molecular inhibitors 
 -mannose-6-phosphate moiety functions as [recognition marker](gaps_ideas.md#pogorzelska_2018#idea1) 
 -acidic conditions activate [zymogen](gaps_ideas.md#pogorzelska_2018#idea2) 
 -in lysosomes, enzymes get activated by controlled [autocatalysis or transactivation](gaps_ideas.md#pogorzelska_2018#idea3) 
 most important: inhibition of the active enzyme by endogenous protein inhibitors 
 
-#### Issues of Inhibiting CTS
+### Issues of Inhibiting CTS
 -gene-targeted knock out animal models show that [deficiencies of CTSs](gaps_ideas.md#pogorzelska_2018#idea4) can result in lethal consequences such as brain atrophy, impaired osteoclastic bone resorption and autosomal recessive skeletal dysplasia 
 
-#### Pathology
+### Pathology
 -Cysteine cathepsins are involved in inflammation, rheumatoid arthritis, osteoporosis, osteoarthritis, bronchial asthma, Alzheimer's disease, multiple sclerosis and many types of cancer
 
 ##### Cancer Progression
@@ -58,7 +57,7 @@ most important: inhibition of the active enzyme by endogenous protein inhibitors
 -low pH also ideal for CTSB digestive process which will facilitate migration of tumor cells through extracellular space 
 -role of CTSB in autophagy and tumor cannibalism is unclear
 
-#### Inhibitors 
+### Inhibitors 
 ##### Endogenous Cysteine Cathepsin Inhibitors
 -cystatins family of proteins are reversible competitive inhibitors of cysteine proteases 
 -stefin A and B/cystatin A and B protect skin and epithelium against overactivity of cysteine proteases 
@@ -80,7 +79,7 @@ most important: inhibition of the active enzyme by endogenous protein inhibitors
 	-cathepsin K inhibitors have reactive functional groups such as nitrile or aldehyde 
 		-Odanacatib (MK-08222) is a covalent nitrile based peptidic derivative (failed clinical trials)
 
-#### Conclusions
+### Conclusions
 -more insight into role of cathepsins in different cancers is needed
 -understanding their role in cancer dev has been a challenge
 -expression of cysteine cathepsins in various cancer cells is needed

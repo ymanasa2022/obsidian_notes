@@ -1,3 +1,6 @@
+gaps can mean gaps in knowledge identified by the paper, by me, by anyone else. 
+ideas can mean thoughts, opinions, and ideas about exploring future questions. 
+
 ## [[pogorzelska_2018]]: 
 #### gap1
 in mammals: lysosomal cathepsins. 11 identified in humans (B, C, F, H, L, K, O, S, V,  X, W)
@@ -27,5 +30,13 @@ can try to develop therapeutics that target cells with cancer markers only in or
 authors suggest designing allosteric inhibitors that bind outside the AS of enzymes (in the cavity lacking a physiological role)
 authors also suggest dev of SiRNA drugs that are highly specific and efficient in silencing of a target gene-- issue is with precise and systematic delivery 
 
-
-
+## bender_2021
+### idea1
+the first step to drug discovery, computationally, can always be large scale docking of millions of ligands to a given protein. This will help eliminate anything that doesn't have any chance of binding to the protein as quickly as possible (including accessibility screens, etc). The next step would be to improve resolution of the docking simulations for ligands that pass first screen. This will again prioritize ones that have a better chance of binding. This second screen could involve using something like autodock vina and the final screen can include FEP calculations to really narrow down our list of ligands for a given protein. 
+[DOCK3.7 paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0075992)
+AutoDock Vina is a program for molecular docking and virtual screening. It uses a gradient optimization method to predict the preferred orientations of a ligand molecule bound to a protein. It uses a united-atom scoring function (amber force field). grid-based energy approach with a genetic algorithm to sample poses. 
+	DOCK focuses on physics-based scoring functions with few terms and sampling by graph-matching between ligand atoms and receptor 'hot-spots'. Two branches of DOCKx.x: 
+		DOCK6.x focuses on accurate prediction of ligand geometries and adopts a wider range of scoring functions (making it more accurate but slower?). hot-spot-based graph matching focused the search for complementary ligand orientations to the protein. 
+		DOCK3.x have physics-based scoring functions with few terms to be optimized for speed needed for huge library screen. it uses a flexibase of pre-calculated ligand conformations-- so it doesn't need to search/build for conformations every time something needs to be docked. 
+		
+	

@@ -39,4 +39,6 @@ AutoDock Vina is a program for molecular docking and virtual screening. It uses
 		DOCK6.x focuses on accurate prediction of ligand geometries and adopts a wider range of scoring functions (making it more accurate but slower?). hot-spot-based graph matching focused the search for complementary ligand orientations to the protein. 
 		DOCK3.x have physics-based scoring functions with few terms to be optimized for speed needed for huge library screen. it uses a flexibase of pre-calculated ligand conformations-- so it doesn't need to search/build for conformations every time something needs to be docked. 
 		
-	
+### idea2
+can use the protein structure/function pipeline here maybe 
+how to incorporate the ligand during modeling?

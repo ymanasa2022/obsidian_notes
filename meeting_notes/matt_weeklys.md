@@ -65,7 +65,7 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 		- 1:00 pm 
 5. Calculus 
 	Calc 2
-	- [ ] Unit 6
+	- [x] Unit 6
 # Aug 16, 2023 (Wed)
 
 ## Things discussed 
@@ -81,12 +81,11 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 ## To do for the week
 1. Admin
 	- [x] email amy about finance and insurance stuff
-	- [ ] go to 1 seminar (Aug 18, Fri 10 am Protease in Action)
-	- [ ] get DOCK3.8 license 
-	- [ ] Training: Healthy Relationships
+	- [x] get DOCK3.8 license 
+	- [ ] Training: Healthy Relationships 
 2. Reading 
 	- **TgCPL**
-		- [ ] [Bender et al. 2021](bender_2021)
+		- [x] [Bender et al. 2021](bender_2021)
 			[*A practical guide to large-scale docking*](https://www.nature.com/articles/s41596-021-00597-z](https://www.nature.com/articles/s41596-021-00597-z)
 		- [ ] [London et al. 2014](https://pubmed.ncbi.nlm.nih.gov/25344815/)
 			*Covalent docking of large libraries for the discovery of chemical probes*
@@ -98,24 +97,39 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 	- Books
 		- [ ] *Thanks for the feedback* 
 3. Computation
-	- [ ] learn how to run DOCK3.8
+	- [x] learn how to run DOCK3.8 (using bender_2021 protocol and Marissa's help)
+		- [x] git clone DOCK into umms-maom turbo
+		- [ ] make instructions for docking 
+		- [ ] start a git repo for docking
 	- [ ] data curation of [TgCPL activities](https://docs.google.com/spreadsheets/d/1Lo0Nc6OFRyUe0arYsGTmi4eR1rFFTiq_GEcoAIC9rmE/edit?usp=sharing)
+	- [x] Finish graphing ME49 decision tree results
+		- [x] run ME49 through decision tree
 	
 1. Calc 3 
 	- [ ] Unit 1
 	- [ ] Unit 2
 ## To do next week
-1. Go to seminar
-	- Date:  Thu 24 Aug
-	- Time:  2pm-3pm (refreshments at 1:45pm)
-	- Presenter:  Habib Hamidi, “Exploratory Analysis of High Dimensional Biomarker Data to Understand Molecular Heterogeneity and  Inform Novel Precision Medicine Based Clinical Trial Design”
-	- THSL Room 2903 or Zoom 
-2. Keep reading Thanks for the Feedback 
-3. GRFP grant brainstorming
-4. Start *Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor* by Virginia Eubanks
-5. Calculus 
+1. Meetings
+	- [ ] Bioinformatics Orientation
+	- Tues 22 Aug
+	- 3:30-4:30pm
+	- [ ] Weekly one-on-one with Matt 
+	- Wed 23 Aug
+	- 1-2pm
+	- [ ] Bioinformatics Kickoff
+	- Thus 24 aug
+	- 1:30-5:30pm
+2. GRFP grant brainstorming
+3. Start *Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor* by Virginia Eubanks
+4. Computation: 
+	- [ ] make database for docking
+	- [ ] start docking
+1. Calculus 3
 	- [ ] Unit 3
 	- [ ] Unit 4
 	- [ ] Unit 5
-	
 # Aug 23, 2023 (Wed)
+Questions
+I think we should make some kind of project outline for the TgCLP docking project, similar to the one you made for co-expression project 
+ligand dataset for tgcpl docking? 
+are we docking multiple receptors to multiple ligands or just multiple ligands to one receptor pose? 

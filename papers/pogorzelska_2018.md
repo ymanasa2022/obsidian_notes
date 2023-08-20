@@ -57,6 +57,14 @@ most important: inhibition of the active enzyme by endogenous protein inhibitors
 -low pH also ideal for CTSB digestive process which will facilitate migration of tumor cells through extracellular space 
 -role of CTSB in autophagy and tumor cannibalism is unclear
 
+##### Cathepsin L (CTSL)
+-elevated levels of CTSL in various cancers
+-CTSL normally localized to lysosomes 
+-upon secretion, CTSL undergoes activating conformational change via interaction with glycosaminoglycan fragments of proteoglycans 
+-secreted from tumor cells than through lysosomal exocytosis or extracellular processing of procathepsin L 
+-important for tumor metastasis 
+-increasing levels of CTSL lead to depletion of cell-cell adhesion. leads to degradation of basal lamina and enables cancer cells to spread. cleavage of E-cadherin 
+-CTSL deficiency leads to significant decrease in pancreatic tumor 
 ### Inhibitors 
 ##### Endogenous Cysteine Cathepsin Inhibitors
 -cystatins family of proteins are reversible competitive inhibitors of cysteine proteases 

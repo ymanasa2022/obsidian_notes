@@ -1,6 +1,10 @@
 There are two proteomes of Toxoplasma Gondii on [Uniprot](https://www.uniprot.org/proteomes?query=(organism_id:5811))
 ***Running both through Jake's Decision Tree to understand the quality of structures available so they can be used to predict functions of the genes in Toxoplasma Gondii*** 
-
+## Reference Proteome (Main)
+Entry: [UP000001529](https://www.uniprot.org/proteomes/UP000001529)
+Organism: [Toxoplasma gondii ME49]()
+Protein Count: 8,315 
+`grep '>' /nfs/turbo/umms-petefred/ymanasa/proteomes/REF_toxo_ME49.fasta | wc -l`
 ## Reference Proteome1
 Entry: [UP000002226](https://www.uniprot.org/proteomes/UP000002226)
 Organism:[Toxoplasma gondii (ATCC 50861 / VEG)](https://www.uniprot.org/taxonomy/432359 "Toxoplasma gondii (strain ATCC 50861 / VEG) (ATCC 50861 / VEG), taxon ID 432359") (organism_id:432359)
@@ -35,7 +39,8 @@ Protein Count: 8,260
 >took about 30 minutes to run 466 
 
 ***started running REF_toxo_ATCC59861.fasta in [1203074.pts-1.lh-sigbio-login1] on aug 16 11:54pm***
-> took about 
+
+***started running REF_toxo_ME49.fasta on aug 16 6:53pm***
 
 all decisions can be found in `/nfs/turbo/umms-petefred/ymanasa/proteomes/decisions/`
 
@@ -44,12 +49,19 @@ To plot a breakdown of the decision outputs:
 1. Download `/nfs/turbo/umms-petefred/ymanasa/proteomes/graphs/plot_proteome_decisions.py`
 2. Download the decision tree output text file 
 3. Run `plot_proteome_decisions.py `after changing lines 8 and 42
-
+##### *Reference Proteome Toxoplasma Gondii ME49 (8,315 proteins)*
+![[dec_toxo_me49_8315.png]]
+-using this proteome for further co-expression analysis 
+-only 111 proteins have an experimental structure/homolog in PDB 
+-1868 structures have homologs in AFDB that exactly match query 
+-4882 proteins have poorly modeled structures/homologs in AFDB 
+-1441 do not have homologs and modeled structures in AFDB 
 ##### Toxoplasma Gondii ATCC 50861 Strain (8,404 proteins)
+![[dec_toxo_ATCC50861_8404.png]]
 
 ##### Toxoplasma Gondii RH88 Strain (8,260 proteins)
 
-![[decisions_toxo_rh88_8260.png]]
+![[dec_toxo_rh88_8260.png]]
 -There are only 111 proteins with pdb structures 
 -Only 1857 structures modeled by AlphaFold2
 -There are 15 proteins that have a close match to structures in AlphaFoldDB
@@ -58,7 +70,7 @@ To plot a breakdown of the decision outputs:
 
 ##### ReferenceProteome of Toxoplasma Gondii RH Strain (466 proteins)
 
-![[decisions_ toxo_rh_466.png]]
+![[dec_ toxo_rh_466.png]]
 -288 have a bad AF structure, 64 dont have PDB or AF structure and need to be modeled
 -107 have an exact match to an AFDB structure
 -only 5 have a PDB structure

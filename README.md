@@ -14,8 +14,9 @@ I created a separate branch called ipad_notes
 1. Go to iPad > iSH
 2. cd /mnt/ymanasa/Obsidian/obsidian_notes/obsidian_notes
 3. `git pull` if needed (will need to do this if I make changes on laptop)
-4. Work on iPad > Obsidian 
-5. When done iPad > iSH, **`git add`, `git commit -m ‘msg’`, `git push`** to push to ipad_notes branch 
+	-if this is not your first time pulling and `could not resolve host: github.com` error shows up, try disconnecting and reconnecting to the internet 
+5. Work on iPad > Obsidian 
+6. When done iPad > iSH, **`git add`, `git commit -m ‘msg’`, `git push`** to push to ipad_notes branch 
 	- Issue: need to create new personal access token on GitHub every time I push
 		- Workaround: 
 			- run `git config --global credential.helper store` while in /root via iPad > iSH 

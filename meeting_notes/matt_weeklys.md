@@ -99,32 +99,36 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 3. Computation
 	- [x] learn how to run DOCK3.8 (using bender_2021 protocol and Marissa's help)
 		- [x] git clone DOCK into umms-maom turbo
-		- [ ] make instructions for docking 
+		- [x] make instructions for docking 
 		- [ ] start a git repo for docking
 	- [ ] data curation of [TgCPL activities](https://docs.google.com/spreadsheets/d/1Lo0Nc6OFRyUe0arYsGTmi4eR1rFFTiq_GEcoAIC9rmE/edit?usp=sharing)
 	- [x] Finish graphing ME49 decision tree results
 		- [x] run ME49 through decision tree
 	
-1. Calc 3 
+4. Calc 3 
 	- [ ] Unit 1
 	- [ ] Unit 2
-## To do next week
-1. Meetings
+5. Meetings
+	- [ ] Meet with Lydia 
+	- Tues 22 Aug 
+	- 10-11 am
 	- [ ] Bioinformatics Orientation
 	- Tues 22 Aug
 	- 3:30-4:30pm
+## To do next week
+1. Meetings
 	- [ ] Weekly one-on-one with Matt 
 	- Wed 23 Aug
 	- 1-2pm
 	- [ ] Bioinformatics Kickoff
 	- Thus 24 aug
-	- 1:30-5:30pm
+	- 1:30-8:30pm
 2. GRFP grant brainstorming
 3. Start *Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor* by Virginia Eubanks
 4. Computation: 
 	- [ ] make database for docking
 	- [ ] start docking
-1. Calculus 3
+5. Calculus 3
 	- [ ] Unit 3
 	- [ ] Unit 4
 	- [ ] Unit 5
@@ -132,4 +136,4 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 Questions
 I think we should make some kind of project outline for the TgCLP docking project, similar to the one you made for co-expression project 
 ligand dataset for tgcpl docking? 
-are we docking multiple receptors to multiple ligands or just multiple ligands to one receptor pose? 
+are we docking multiple receptor poses to multiple ligands or just multiple ligands to one receptor pose? 

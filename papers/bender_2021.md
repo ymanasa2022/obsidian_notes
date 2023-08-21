@@ -12,7 +12,7 @@
 -'make on demand' libraries: Enamine 
 -structure based molecular docking: simulations of docking many ligands to a protein 
 -large scale docking is unable to simulate enough interaction terms to achieve chemical accuracy
--they only help eliminate molecules that are definitely unable to bind a target, [prioritizing ones that have a change](gaps_ideas#bender_2021#idea1)
+-they only help eliminate molecules that are definitely unable to bind a target, [prioritizing ones that have a change](gaps_ideas.md#bender_2021#idea1)
 
 ### Large library docking workflow
 
@@ -27,7 +27,7 @@
 -Hydrogen atoms should be removed and remodeled. Hydrogens part of certain residues can be modeled using programs like Reduce (included in DOCK3.7), Maestro, ProKa or Chimera 
 *Protonation of the protein structure is critical for docking (VDW and dipole moments)*
 ##### Homology modeling
--if there is no experimental structure available, model it using MODELLER, Rosetta, ICM or [I-TASSER](gaps_ideas#bender_2021#idea2)
+-if there is no experimental structure available, model it using MODELLER, Rosetta, ICM or [I-TASSER](gaps_ideas.md#bender_2021#idea2)
 -incorporation of the ligand during modeling can help prevent pocket from collapsing during docking
 
 ##### Docking Parameters

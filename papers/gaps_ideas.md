@@ -50,3 +50,6 @@ how to identify a protein-binding scaffold that orients the electrophile while m
 
 #### idea1
 very few docking screens for covalent ligands. the issue lies in combining classical non-covalent scoring with covalent restraints and bond energies. Maybe we can develop covalent scoring using classical non-covalent scoring 
+include energy of covalent bond formation term in existing model scoring function 
+sampling can be improved by relacing around ligand dihedral angles and accounting for bonded energies 
+authors think incorporating quantum level approaches to predict reactivity of specific scaffold/electrophile combinations may be a direction forward

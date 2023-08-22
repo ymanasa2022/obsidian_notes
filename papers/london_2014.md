@@ -18,4 +18,4 @@
 -DOCKovalent to screen compound libraries against three targets 
 
 ### Methods
-![[Pasted image 20230821102553.png]]
+![[Covalent_docking_method.png]]

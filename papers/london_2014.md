@@ -42,3 +42,4 @@
 - Omega generates conformations of the rigid starting electrophile
 - collection of pre-generated ligand conformations in reacted stated is saved in DOCK readable flexibase format file
 
+>>>>>>> 6a4c9439d45ce706481bee3e239554dbba6e7cb6

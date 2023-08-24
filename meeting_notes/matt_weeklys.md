@@ -82,40 +82,54 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 1. Admin
 	- [x] email amy about finance and insurance stuff
 	- [x] get DOCK3.8 license 
-	- [ ] Training: Healthy Relationships 
+	- [x] Training: Healthy Relationships 
 2. Reading 
 	- **TgCPL**
 		- [x] [Bender et al. 2021](bender_2021)
 			[*A practical guide to large-scale docking*](https://www.nature.com/articles/s41596-021-00597-z](https://www.nature.com/articles/s41596-021-00597-z)
-		- [ ] [London et al. 2014](https://pubmed.ncbi.nlm.nih.gov/25344815/)
-			*Covalent docking of large libraries for the discovery of chemical probes*
-	- **Active ML Docking** 
-		- [ ] [Martin et al. 2021](https://chemrxiv.org/engage/chemrxiv/article-details/60c756f8bb8c1a4fa63dc6e2](https://chemrxiv.org/engage/chemrxiv/article-details/60c756f8bb8c1a4fa63dc6e2) 
-			*State of the Art Iterative Docking with Logistic Regression and Morgan Fingerprints*
-		- [ ] [Adeshina et al. 2020](https://www.pnas.org/doi/full/10.1073/pnas.2000585117](https://www.pnas.org/doi/full/10.1073/pnas.2000585117) 
-			*Machine learning classification can reduce false positives in structure-based virtual screening
+		- [x] [London et al. 2014](london_2014)
+			[*Covalent docking of large libraries for the discovery of chemical probes*](https://pubmed.ncbi.nlm.nih.gov/25344815/)
 	- Books
-		- [ ] *Thanks for the feedback* 
+		- [x] *Thanks for the feedback* 
 3. Computation
 	- [x] learn how to run DOCK3.8 (using bender_2021 protocol and Marissa's help)
 		- [x] git clone DOCK into umms-maom turbo
 		- [x] make instructions for docking 
-		- [ ] start a git repo for docking
-	- [ ] data curation of [TgCPL activities](https://docs.google.com/spreadsheets/d/1Lo0Nc6OFRyUe0arYsGTmi4eR1rFFTiq_GEcoAIC9rmE/edit?usp=sharing)
+	- [x] data curation of [TgCPL activities](https://docs.google.com/spreadsheets/d/1Lo0Nc6OFRyUe0arYsGTmi4eR1rFFTiq_GEcoAIC9rmE/edit?usp=sharing)
 	- [x] Finish graphing ME49 decision tree results
 		- [x] run ME49 through decision tree
 	
 4. Calc 3 
-	- [ ] Unit 1
-	- [ ] Unit 2
-5. Meetings
-	- [ ] Meet with Lydia 
+	- [x] Unit 1
+	
+1. Meetings
+	- [x] Meet with Lydia 
 	- Tues 22 Aug 
 	- 10-11 am
-	- [ ] Bioinformatics Orientation
+	- [x] Bioinformatics Orientation
 	- Tues 22 Aug
 	- 3:30-4:30pm
-## To do next week
+
+# Aug 23, 2023 (Wed)
+## Things discussed
+1. I think we should make some kind of project outline for the TgCLP docking project, similar to the one you made for co-expression project -- started making [my own](toxo_data_curation)
+2. the data curation we are doing is for making a ligand dataset for retrospective assessment for tgcpl docking?
+3. are we docking multiple receptor poses to multiple ligands or just multiple ligands to one receptor pose? are we also docking multiple receptors (human and tgcpl proteins?) with multiple ligands?
+4. Met with Lydia about previous projects. She was suggesting I write a short application note for the journal of bioinformatics for our structure/function pipeline once its fully working. Passed on other projects with documentation. She thought it was cool that we were using it for toxo and hence thinks writing a short paper on this would be nice for me 
+5. GRFP Eligibility: 
+	- Individuals with prior graduate enrollment who have: (i) completed more than one academic year in any graduate degree-granting program, (ii) earned a previous master's degree of any kind (including Bachelor's-Master's degree), or (iii) earned a professional degree must meet the following requirements: not enrolled in a graduate degree program at application deadline, two or more consecutive years past graduate degree enrollment or completion at the application deadline (https://www.nsf.gov/pubs/2023/nsf23605/nsf23605.pdf)
+	- Have completed no more than one academic year (according to institution's academic calendar) while enrolled in a graduate degree program
+	- length of the Personal, Relevant Background and Future Goals Statement is three (3) pages (PDF). The maximum length of the Graduate Research Plan Statement is two (2) pages (PDF)
+6. GRFP idea: needs to be a project that I will continue working on
+	- examples of GRFPs?
+	- Specific Aim 1: Docking to TgCPL (or another protein) in different capacities 
+	- Specific Aim 2: Using ML to dock instead of larger simulations for downstream/higher resolution docking steps
+	- need to think about broader impact/usage: educational outreach about toxo/docking simulations, etc 
+	- intellectual merit and broader impact sections 
+7. Prelims:
+	- thinking of doing it end of first year/in the summer 
+	- can it be on any topic? even one that im working on or does it need to be a topic different from what im working on?
+## To do for the week
 1. Meetings
 	- [ ] Weekly one-on-one with Matt 
 	- Wed 23 Aug
@@ -124,16 +138,35 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 	- Thus 24 aug
 	- 1:30-8:30pm
 2. GRFP grant brainstorming
-3. Start *Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor* by Virginia Eubanks
+	- [ ]  write outlines
+3. Reading
+	- TgCPL
+		- [ ] R01 grant paper
+		- [ ] Zwicker et al, 2018
+			*Optimization of dipeptidic inhibitors of cathepsin L for improved Toxoplasma gondii selectivity and CNS permeability* 
+		- [ ] Di Cristina et al, 2017
+			*Toxoplasma depends on lysosomal consumption of autophagosomes for persistent infection*
+	- ML Docking
+		- [ ] [Martin et al. 2021](martin_2021) 
+			[*State of the Art Iterative Docking with Logistic Regression and Morgan Fingerprints*](https://chemrxiv.org/engage/chemrxiv/article-details/60c756f8bb8c1a4fa63dc6e2)
+		- [ ] Improving Screening Efficiency through Iterative Screening Using Docking and Conformal Prediction
+		- [ ] [Adeshina et al. 2020](https://www.pnas.org/doi/10.1073/pnas.2000585117) 
+			*Machine learning classification can reduce false positives in structure-based virtual screening*
+		- [ ] Coleman et al, 2013
+			*Ligand Pose and Orientational Sampling in Molecular Docking*
+		- [ ] Dara et al, 2022
+			*Machine Learning in Drug Discovery: A Review*
+		- [ ] Graff et al, 2020
+			*Accelerating High-Throughput Virtual Screening Through Molecular Pool-Based Active Learning*
+		- [ ]  Gentile et al, 2020
+			*Deep Docking: A Deep Learning Platform for Augmentation of Structure Based Drug Discovery*
 4. Computation: 
+	- [ ] set up new laptop
+	- [ ] make git repo for docking 
 	- [ ] make database for docking
 	- [ ] start docking
 5. Calculus 3
+	- [ ] Unit 2
 	- [ ] Unit 3
 	- [ ] Unit 4
 	- [ ] Unit 5
-# Aug 23, 2023 (Wed)
-Questions
-I think we should make some kind of project outline for the TgCLP docking project, similar to the one you made for co-expression project 
-ligand dataset for tgcpl docking? 
-are we docking multiple receptor poses to multiple ligands or just multiple ligands to one receptor pose? 

@@ -71,3 +71,6 @@ will write this later
 9. `source 1_submit.sh`
 10. check `results/<pose#>/test.mol2.gz.0` binary 
 	- should be full and not with just one line
+
+
+http://tebresearch.org/2014.10.30.a.DOCK_3.7_tutorial.pdf 

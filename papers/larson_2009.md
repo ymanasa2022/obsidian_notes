@@ -13,7 +13,6 @@
 - screening of small library of cathepsin and proteasome inhibitors identified two compounds that impair Tg cell invasion 
 	- LHVS 
 		- blocks parasite attachment and gliding motility by impairing release of invasion proteins
-
 ### Discussion 
 - Properties of LHVS that facilitate identification of main target (TgCPL)
 	- vinyl sulfone warhead of LHVS covalently modifies AS thiol of reactive cathepsin proteases (irreversible labeling)

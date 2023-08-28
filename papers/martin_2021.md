@@ -1,5 +1,12 @@
 ## *State of the Art Iterative Docking with Logistic Regression and Morgan Fingerprints*
 
+Morgan Fingerprints: 
+- most popular molecular fingerprint
+- aka ECFP4
+- describing molecules as finger prints where we  are encoding their structural characteristics as a vector
+- used for fast similarity comparisons forming the basis for structure-activity relationship studies, virtual screening and construction chemical space maps 
+- not suited for large molecules
+- related to MinHashed fingerprint MHFP6
 ### Abstract
 - The paper re-docks to a receptor and lactamase using parallelized compute to massively reduce computation time to find top-ranked ligands 
 - uses baseline featurization to show logistic regression on Morgan fingerprints 
@@ -22,7 +29,6 @@
 	- performs better than message-passing network 
 	- performance is target dependent 
 	- ultra large docking campaign done in 1-2 weeks
-
 ### Results
 #### Binarizing docking scores by percentile 
 - classifiers require a cut off to binarize ligands into high scoring and low scoring classes 
@@ -30,4 +36,21 @@
 	- hit rate was binned instead of dockin scores
 	- binning can lead to artifacts that depend on the bin size 
 		-   Binning is a way to group a number of more or less continuous values into a smaller number of "bins"
-Figure 1. additive model fit to the validation data using a logit link function, without binding and using ligand ranks instead of raw docking scores. used as a ranking took not for seeing the distribution of binding affinities 
+- Figure 1. additive model fit to the validation data using a logit link function, without binding and using ligand ranks instead of raw docking scores. used as a ranking tool not for seeing the distribution of binding affinities 
+- ***Hit rate: proportion of assays in which the screening compound was active*** 
+#### Binary fingerprints have a wide range of performance 
+- Figure 2. shows average precision of molecular fingerprints available in RDKit dependent on fingerprint size. best performing fingerprint is morgan_feat fingerprint and larger the fingerprint size, the better the performance. Authors suggest using fingerprints greater than 8192 for ML efforts
+- including pharmacophoric featurization improved performance at smaller sizes 
+#### Proper sampling requires at least 400,000 ligands
+- iterative docking relies on random sample as a training set
+- training set must completely sample the chemical diversity in the high-scoring class such that it resembles the test set 
+- training set should have good estimate of cut off percentile 
+- relationship between predictive performance and training set size might gauge the range of best performance 
+#### AmpC and D4: Single-iteration performance 
+- enrichment: fold reduction in time compared to random search 
+- enrichment and time spent docking are a function of model performance 
+#### Comparison to previous work 
+- alternate to single iterations is active learning 
+	- random forest, neural network or message-passing graph neural network to regress molecule structure against docking score 
+	- Graff et al
+	- 

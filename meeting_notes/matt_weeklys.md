@@ -126,20 +126,21 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 	- Specific Aim 2: Using ML to dock instead of larger simulations for downstream/higher resolution docking steps
 	- need to think about broader impact/usage: educational outreach about toxo/docking simulations, etc 
 	- intellectual merit and broader impact sections 
-7. Prelims:
-	- thinking of doing it end of first year/in the summer 
+1. Prelims:
+	- can only do it after finishing core requirements 
 	- can it be on any topic? even one that im working on or does it need to be a topic different from what im working on?
 ## To do for the week
 1. Meetings
-	- [ ] Weekly one-on-one with Matt 
+	- [x] Weekly one-on-one with Matt 
 	- Wed 23 Aug
 	- 1-2pm
-	- [ ] Bioinformatics Kickoff
+	- [x] Bioinformatics Kickoff
 	- Thus 24 aug
 	- 1:30-8:30pm
-2. GRFP grant brainstorming
-	- [ ]  write outlines
-3. Reading
+2. ~~GRFP grant brainstorming?~~
+	- [x]  write outlines
+***Im not eligible for GRFP*** 
+1. Reading
 	- TgCPL
 		- [ ] R01 grant paper
 		- [ ] Zwicker et al, 2018
@@ -149,20 +150,19 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 	- ML Docking
 		- [ ] [Martin et al. 2021](martin_2021) 
 			[*State of the Art Iterative Docking with Logistic Regression and Morgan Fingerprints*](https://chemrxiv.org/engage/chemrxiv/article-details/60c756f8bb8c1a4fa63dc6e2)
+			what is enrichment???
 		- [ ] Improving Screening Efficiency through Iterative Screening Using Docking and Conformal Prediction
 		- [ ] [Adeshina et al. 2020](https://www.pnas.org/doi/10.1073/pnas.2000585117) 
 			*Machine learning classification can reduce false positives in structure-based virtual screening*
 		- [ ] Coleman et al, 2013
 			*Ligand Pose and Orientational Sampling in Molecular Docking*
-		- [ ] Dara et al, 2022
-			*Machine Learning in Drug Discovery: A Review*
 		- [ ] Graff et al, 2020
 			*Accelerating High-Throughput Virtual Screening Through Molecular Pool-Based Active Learning*
 		- [ ]  Gentile et al, 2020
 			*Deep Docking: A Deep Learning Platform for Augmentation of Structure Based Drug Discovery*
 4. Computation: 
-	- [ ] set up new laptop
-	- [ ] make git repo for docking 
+	- [x] set up new laptop
+	- [x] make git repo for docking 
 	- [ ] make database for docking
 	- [ ] start docking
 5. Calculus 3

@@ -18,7 +18,7 @@
 - DOCKovalent to screen compound libraries against three targets 
 
 ### Methods
-![[covalent_docking_method.png]]
+![[Covalent_docking_method.png]]
 
 ### Results
 #### Retrospective Assessment

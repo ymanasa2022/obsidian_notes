@@ -16,6 +16,7 @@ Project outline (from [[bender_2021]]):
 2. Covalently Dock: 
 	- use method to dock a library of commercially available ligand types assessed in previous step
 		- [ ] make library using guide to pharmacology.com, chemb, pubchem, binding db
+			- [ ] one zinc id might correspond to different chmbl molecules. toxoplasma cpl and human cpL
 	- assess top-ranked x% of the library 
 	- purchase highest/medium ranked compounds and lowest ranked compounds similar to higher ranked commercially unavailable compounds 
 3. Get co-crystal compounds of the most promising new ligands 

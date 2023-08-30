@@ -15,7 +15,7 @@ Docking examples done in `/home/ymanasa/TgCPL_docking`
 will write this later
 ## Make Structure  
 1. run `source setup_dock_environment.sh` in `/home/<user>/<receptor>_docking`
-	- for first time setup change these lines before running setup_dock_environment.sh:
+	- change these lines before running setup_dock_environment.sh:
 		1. change lines 16-19 with appropriate SLURM info
 		2. line 21 with correct scratch directory path
 		3. line 22 where dock_campaign_template repo was cloned (ex:  `${HOME}/opt/dock_campaign_template`) 

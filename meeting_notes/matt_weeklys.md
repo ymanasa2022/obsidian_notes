@@ -113,10 +113,10 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 # Aug 23, 2023 (Wed)
 ## Things discussed
 1. I think we should make some kind of project outline for the TgCLP docking project, similar to the one you made for co-expression project -- started making [my own](toxo_data_curation)
-2. the data curation we are doing is for making a ligand dataset for retrospective assessment for tgcpl docking?
+2. the data curation we are doing is for making a ligand dataset for retrospective assessment for tgcpl docking? yes
 3. are we docking multiple receptor poses to multiple ligands or just multiple ligands to one receptor pose? are we also docking multiple receptors (human and tgcpl proteins?) with multiple ligands?
 4. Met with Lydia about previous projects. She was suggesting I write a short application note for the journal of bioinformatics for our structure/function pipeline once its fully working. Passed on other projects with documentation. She thought it was cool that we were using it for toxo and hence thinks writing a short paper on this would be nice for me 
-5. GRFP Eligibility: 
+5. GRFP Eligibility: Not eligible
 	- Individuals with prior graduate enrollment who have: (i) completed more than one academic year in any graduate degree-granting program, (ii) earned a previous master's degree of any kind (including Bachelor's-Master's degree), or (iii) earned a professional degree must meet the following requirements: not enrolled in a graduate degree program at application deadline, two or more consecutive years past graduate degree enrollment or completion at the application deadline (https://www.nsf.gov/pubs/2023/nsf23605/nsf23605.pdf)
 	- Have completed no more than one academic year (according to institution's academic calendar) while enrolled in a graduate degree program
 	- length of the Personal, Relevant Background and Future Goals Statement is three (3) pages (PDF). The maximum length of the Graduate Research Plan Statement is two (2) pages (PDF)
@@ -165,8 +165,3 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 	- [x] make git repo for docking 
 	- [ ] make database for docking
 	- [ ] start docking
-5. Calculus 3
-	- [ ] Unit 2
-	- [ ] Unit 3
-	- [ ] Unit 4
-	- [ ] Unit 5

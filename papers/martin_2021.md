@@ -53,4 +53,3 @@ Morgan Fingerprints:
 - alternate to single iterations is active learning 
 	- random forest, neural network or message-passing graph neural network to regress molecule structure against docking score 
 	- Graff et al
-	- 

@@ -163,5 +163,79 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 4. Computation: 
 	- [x] set up new laptop
 	- [x] make git repo for docking 
-	- [ ] make database for docking
+	- [ ] make database for covalent docking
 	- [ ] start docking
+# Aug 30, 2023 (Wed)
+## Things Discussed 
+- make [library](toxo_data_curation) using guide to pharmacology.com, chemb, pubchem, binding db
+	- one zinc id might correspond to different chmbl molecules. toxoplasma cpl and human cpL
+	- get list of compounds from pChEMBL for a given target
+	- for a given assay, get list of compounds 
+	- take out ones with low pChEMBL Values and ones with comments in data validity. repeat for human cpl
+- Test running [Covalent](covalent_docking_TgCPL) docking on greatlakes with existing database 
+## To do for the week
+- [x] curate small compounds that dock to tgcpl
+	- R05 Violations (drug bioaccessibility rules)? if more than 0, take out?
+	- some dont have pchembl values
+	- took out "not active" compounds from comment column 
+	- molecular weight limit?
+	- took out all "outside typical range" from data validity column
+	- couple of rows at the end of the file have blank columns in HsCPL_ligand_activities
+- [x] test and debug covalent docking 
+- [x] explore fellowship requirements https://www.hertzfoundation.org/the-fellowship/
+	- not sure where to get four recommenders
+- [x] read BIOINF 602 paper 
+	- [x] **[Human population-specific gene expression and transcriptional network modification with polymorphic transposable elements](https://academic.oup.com/nar/article/45/5/2318/2725373)**
+- [x] read BIOSTATS textbooks
+	- [x] watch videos on counting etc
+	- [x] finish HW 
+	- [x] decide whether to switch to STATS 425 (wont be swithcing)
+- [ ] finish reading:
+	- [ ]  [Martin et al. 2021](martin_2021) 
+			[*State of the Art Iterative Docking with Logistic Regression and Morgan Fingerprints*](https://chemrxiv.org/engage/chemrxiv/article-details/60c756f8bb8c1a4fa63dc6e2)
+	 - [ ] [Adeshina et al. 2020](https://www.pnas.org/doi/10.1073/pnas.2000585117) 
+			*Machine learning classification can reduce false positives in structure-based virtual screening* 
+# Sep 6, 2023
+- continue data curation for HsCPL and TgCPL 
+	- remove anything that doesnt report in nM (needs to be less than 1000nM for IC50 and Ki)
+	- Inhibition given in percentages need to be taken out 
+	- take out all "not active" compounds and "outside typical range"
+	- take out anything with empty columns 
+- test covalent docking with datasets in `/home/ymanasa/turbo/CovalentLibs/unsubstituted-acrylamides `and `/home/ymanasa/turbo/CovalentLibs/beta-sub-acrylate-esters`
+	- previous covalent docking methods used zinc instock database which have ligands that arent made for covalent docking
+		- covalent docking involved adding a Si atom to the ligand structure pointing the program to dock this Si atom to the specified residue on the protein target 
+		- the zinc instock ligands did not have these Si atoms and therefore covalent docking was not possible to do with tgcpl 
+- hit screening using chimera 
+	- maybe try to automate
+	- need three files (examples can be found in: `/Users/ymanasa/Library/CloudStorage/OneDrive-MichiganMedicine/omeara_lab/TgCPL/Docking/example_hit_screen`)
+		1. load rec.crg.pdb and xtal-lig.pdb 
+		2. do visuale manipulations to make one pdb transparent and the other not 
+		3. make sure you can visualize the original drug ligand in the protein pocket
+		4. load the poses.mol2 file that come from after processing the docking results on greatlakes 
+		5. use visual analysis to decide which ligands to keep and which ones to discard 
+- work on the grant 
+	- email Dr. Uhler-- probably meet up with him 
+	- email Dr. Paula-- zoom?
+## To do for the week 
+- [ ] continue data curation for HsCPL and TgCPL
+- [ ] test covalent docking with unsubstituted-acrylamides 
+- [ ] test covalent docking with beta-sub-acrylate-esters
+- [x] email Dr. Paula 
+	- [ ] set up zoom time (she wont respond until sept 15)
+- [x] email Dr. Uhler and Dr. Thompson
+	- [ ] set up meetup time 
+- [ ] hit screening for unsubstituted-acrylamides hits 
+- [ ] hit screening for beta-sub-acrylate-esters hits 
+- [ ] start looking into grant application 
+	- [ ] what is needed
+	- [ ] outline of essays
+	- [ ] send letter of rec emails
+- [ ] do practice problems for BIOSTAT 602
+- [ ] read BIOINF 602 paper 
+	- [ ] [Viral genomes reveal patterns of the SARS-CoV-2 outbreak in Washington State](https://www.science.org/doi/full/10.1126/scitranslmed.abf0202?rfr_dat=cr_pub++0pubmed&url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org)
+- [ ] do BIOSTAT 601 HW 
+- [ ] do BIOINF 500 HW 
+- [ ] do BIOINF 575 HW
+- [ ] finish reading:
+	- [ ]  [Martin et al. 2021](martin_2021) 
+			[*State of the Art Iterative Docking with Logistic Regression and Morgan Fingerprints*](https://chemrxiv.org/engage/chemrxiv/article-details/60c756f8bb8c1a4fa63dc6e2)

@@ -1,0 +1,24 @@
+# Operating System
+- provides interface between computer hardware and a user 
+- unix: 
+	- OS derive from AT&T Unix 
+	- branches: linux, minix, mac os x
+	- distributions: ubuntu, fedora, debian
+- unix vs linux:
+	- unix didnt used to have gui
+		- unix shell is a command line interpreter for the user to interface for unix-like operating systems 
+	- unix developed for servers 
+	- linux is open source 
+	- linux is for everyone. developed by community 
+	- linus is installed on mobiles, computers, etc
+	- linux GUI: KDE and Gnome
+- IDE: integrated development environment 
+	- designed to preview and test code 
+	- VS Code 
+	- PyCharm 
+- text editors: can only write code
+	- vim
+	- GNU nano
+	- emacs
+
+- cut -f1-5: takes out fields/columns 1 through 5

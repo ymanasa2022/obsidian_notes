@@ -2,7 +2,7 @@
 
 ### Abstract
 - chemical probes that form covalent bonds with protein target show higher selectivity, higher potency and utility 
-- but, protein0reactive compounds are avoiding in docking campaigns 
+- but, protein reactive compounds are avoiding in docking campaigns 
 - method to screen electrophilic small molecule libraries 
 - target: protein nucleophiles 
 - web server: covalent.docking.org aims to help us find small molecules to test for activity against my biological target for which I have a structure
@@ -41,5 +41,3 @@
 - partial atomic charges and solvation energies are calculated for each structure using AMSOL 
 - Omega generates conformations of the rigid starting electrophile
 - collection of pre-generated ligand conformations in reacted stated is saved in DOCK readable flexibase format file
-
->>>>>>> 6a4c9439d45ce706481bee3e239554dbba6e7cb6

@@ -29,7 +29,6 @@
 ##### Homology modeling
 - if there is no experimental structure available, model it using MODELLER, Rosetta, ICM or [I-TASSER](gaps_ideas.md#bender_2021#idea2)
 - incorporation of the ligand during modeling can help prevent pocket from collapsing during docking
-
 ##### Docking Parameters
 - calibrate scoring functions 
 - important to monitor contributions of each energy term to the total score

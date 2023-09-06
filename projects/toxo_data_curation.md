@@ -16,7 +16,9 @@ Project outline (from [[bender_2021]]):
 2. Covalently Dock: 
 	- use method to dock a library of commercially available ligand types assessed in previous step
 		- [ ] make library using guide to pharmacology.com, chemb, pubchem, binding db
-			- [ ] one zinc id might correspond to different chmbl molecules. toxoplasma cpl and human cpL
+			- one zinc id might correspond to different chmbl molecules. toxoplasma cpl and human cpL
+			- [ ] take out ones with low pChEMBL Values and ones with comments in data validity. repeat for human cpl
+				- pChEMBL allows comparable measures of half-maximal response concentration/potency/affinity to be compared to a negative logarithmic scale. an IC50 measurement of 1nM would have a pChEMBL value of 9. pChEMBL = -log(molar IC50, XC50, EC50, AC50, Ki, Kd or Potency). Higher the better?
 	- assess top-ranked x% of the library 
 	- purchase highest/medium ranked compounds and lowest ranked compounds similar to higher ranked commercially unavailable compounds 
 3. Get co-crystal compounds of the most promising new ligands 

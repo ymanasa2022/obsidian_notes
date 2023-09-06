@@ -60,17 +60,16 @@ will write this later
 4. choose prepared structure  `<structure_name>`
 5. choose default docking name
 	- creates `docking_runs/` with `1_submit.sh`
-	- change line 17: `bash /home/ymanasa/<receptor>_docking/dock_submit.sh`
-6. ` cp ${DOCK_TEMPLATE}/scripts/dock_submit.sh /home/<user>/receptor_docking/`
-7. `vi /home/<user>/receptor_docking/dock_submit.sh`
-	- line 32: add `export USE_DB2=true`
-	- line 33: add `export USE_DB2_BATCH_SIZE=1`
-	- line 34: add `export USE_DB2_TGZ=false`
-	- line 38: change to `export DOCKEXEC=${DOCKBASE}/docking/DOCK/dock64`
-8. `cd docking_runs/<receptor>_<date>_<db_name>/` 
-9. `source 1_submit.sh`
-10. check `results/<pose#>/test.mol2.gz.0` binary 
+	- change from `bash ${DOCK_TEMPLATE}/scripts/dock_submit.sh` to: `bash /home/ymanasa/turbo/projects/TgCPL/docking-campaigns/docking_campaigns_local/dock_submit.sh \`
+6. For first time: 
+	1. `cp ${DOCK_TEMPLATE}/scripts/dock_submit.sh /home/<user>/receptor_docking/`
+	2. `vi /home/<user>/receptor_docking/dock_submit.sh`
+		- line 32: add `export USE_DB2=true`
+		- line 33: add `export USE_DB2_BATCH_SIZE=1`
+		- line 34: add `export USE_DB2_TGZ=false`
+		- line 38: change to `export DOCKEXEC=${DOCKBASE}/docking/DOCK/dock64`
+7. `cd docking_runs/<receptor>_<date>_<db_name>/` 
+8. `source 1_submit.sh`
+9. check `results/<pose#>/test.mol2.gz.0` binary 
 	- should be full and not with just one line
 
-
-http://tebresearch.org/2014.10.30.a.DOCK_3.7_tutorial.pdf 

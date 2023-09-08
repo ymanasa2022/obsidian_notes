@@ -48,4 +48,3 @@ It is working just fine. Note the export path information. That is probably not 
 		- export path info: ![[export_path_home_cov_tgcpl.png]]
 - Things are at least running but memory issues didnt let the jobs finish.
 - Path issues must be resolved if you want to run from turbo/
-- 

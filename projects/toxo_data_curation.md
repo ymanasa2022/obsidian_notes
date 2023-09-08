@@ -15,20 +15,26 @@ Project outline (from [[bender_2021]]):
 			- [ ] tldr to create decoys; does a property similarity search but chemically different. DUD-E also does this. 
 2. Covalently Dock: 
 	- use method to dock a library of commercially available ligand types assessed in previous step
-		- [ ] make library using guide to pharmacology.com, chemb, pubchem, binding db
-			- one zinc id might correspond to different chmbl molecules. toxoplasma cpl and human cpL
-			- [ ] take out ones with low pChEMBL Values and ones with comments in data validity. repeat for human cpl
-				- pChEMBL allows comparable measures of half-maximal response concentration/potency/affinity to be compared to a negative logarithmic scale. an IC50 measurement of 1nM would have a pChEMBL value of 9. pChEMBL = -log(molar IC50, XC50, EC50, AC50, Ki, Kd or Potency). Higher the better?
-	- assess top-ranked x% of the library 
+		- [ ] make library using guide chembl
+			- need ligands experimentally docked to toxoplasma cpl and human cpL 
+			- chembl will give a curated list of ligands that were experimentally 
+			- Criteria for filtering lists. Hide rows if they have: 
+				- Low or NO pChEMBL Values (anything less than 4)
+					- pChEMBL allows comparable measures of half-maximal response concentration/potency/affinity to be compared to a negative logarithmic scale. an IC50 measurement of 1nM would have a pChEMBL value of 9. pChEMBL = -log(molar IC50, XC50, EC50, AC50, Ki, Kd or Potency) Higher the better
+				- Data Validity Column has "ND" or "Not Determined" or "Not active" or "Not Evaluated"
+				- Standard Value and Stander Unit Columns that have values greater than 1000nM. anything greater than 1mM doesn't reflect biological accuracy. anything that is given as a percentage was also taken out
+				- Standard Type column with "Survival" or "Inhibition" or "mortality" or "activity" or "ratio"
+		- [ ] perform covalent docking using DOCK3.8
+		- [ ] perform manual dock poses screening using chimera 
+		- [ ] make narrowed down list of ligands for experimental testing
+	
 	- purchase highest/medium ranked compounds and lowest ranked compounds similar to higher ranked commercially unavailable compounds 
 3. Get co-crystal compounds of the most promising new ligands 
 	- validate docking poses for highest ranked ligands
 		- [ ] RMSD
 4. experimentally test inhibition of protein by new ligands 
-	- IC50
-	- MIC
-	- activity assays
+	- IC50/EC50/ID50 
+	- Ki
+	- other activity assays
 	- full dose-response curves against protein target
-
-look at grant for steps 
 https://pubs.acs.org/doi/full/10.1021/jacs.9b10377

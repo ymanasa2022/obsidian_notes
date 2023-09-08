@@ -196,11 +196,14 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 	 - [ ] [Adeshina et al. 2020](https://www.pnas.org/doi/10.1073/pnas.2000585117) 
 			*Machine learning classification can reduce false positives in structure-based virtual screening* 
 # Sep 6, 2023
-- continue data curation for HsCPL and TgCPL 
+- data curation for HsCPL and TgCPL 
 	- remove anything that doesnt report in nM (needs to be less than 1000nM for IC50 and Ki)
 	- Inhibition given in percentages need to be taken out 
 	- take out all "not active" compounds and "outside typical range"
 	- take out anything with empty columns 
+	- IC50 is very similar to Ki (K inhibition constant). Ki is slightly more accurate than IC50.
+		- IC50 is how much drug is needed to inhibit the protein function by 50% 
+		- Ki is an indicator of how potent an inhibitor is
 - test covalent docking with datasets in `/home/ymanasa/turbo/CovalentLibs/unsubstituted-acrylamides `and `/home/ymanasa/turbo/CovalentLibs/beta-sub-acrylate-esters`
 	- previous covalent docking methods used zinc instock database which have ligands that arent made for covalent docking
 		- covalent docking involved adding a Si atom to the ligand structure pointing the program to dock this Si atom to the specified residue on the protein target 
@@ -217,7 +220,7 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 	- email Dr. Uhler-- probably meet up with him 
 	- email Dr. Paula-- zoom?
 ## To do for the week 
-- [ ] continue data curation for HsCPL and TgCPL
+- [x] continue data curation for HsCPL and TgCPL
 - [ ] test covalent docking with unsubstituted-acrylamides 
 - [ ] test covalent docking with beta-sub-acrylate-esters
 - [x] email Dr. Paula 
@@ -234,8 +237,8 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 - [ ] read BIOINF 602 paper 
 	- [ ] [Viral genomes reveal patterns of the SARS-CoV-2 outbreak in Washington State](https://www.science.org/doi/full/10.1126/scitranslmed.abf0202?rfr_dat=cr_pub++0pubmed&url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org)
 - [ ] do BIOSTAT 601 HW 
-- [ ] do BIOINF 500 HW 
-- [ ] do BIOINF 575 HW
+- [x] do BIOINF 500 HW 
+- [ ] do BIOINF 575 exercises
 - [ ] finish reading:
 	- [ ]  [Martin et al. 2021](martin_2021) 
 			[*State of the Art Iterative Docking with Logistic Regression and Morgan Fingerprints*](https://chemrxiv.org/engage/chemrxiv/article-details/60c756f8bb8c1a4fa63dc6e2)

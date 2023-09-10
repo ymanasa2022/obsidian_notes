@@ -172,7 +172,7 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 	- get list of compounds from pChEMBL for a given target
 	- for a given assay, get list of compounds 
 	- take out ones with low pChEMBL Values and ones with comments in data validity. repeat for human cpl
-- Test running [Covalent](covalent_docking_TgCPL) docking on greatlakes with existing database 
+- Test running [Covalent](covalent_docking_TgCPL_test.md) docking on greatlakes with existing database 
 ## To do for the week
 - [x] curate small compounds that dock to tgcpl
 	- R05 Violations (drug bioaccessibility rules)? if more than 0, take out?
@@ -222,23 +222,30 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 ## To do for the week 
 - [x] continue data curation for HsCPL and TgCPL
 - [ ] test covalent docking with unsubstituted-acrylamides 
+- [ ] hit screening for unsubstituted-acrylamides hits 
+- [ ] hit screening for beta-sub-acrylate-esters hits 
 - [ ] test covalent docking with beta-sub-acrylate-esters
+
 - [x] email Dr. Paula 
 	- [ ] set up zoom time (she wont respond until sept 15)
 - [x] email Dr. Uhler and Dr. Thompson
 	- [ ] set up meetup time 
-- [ ] hit screening for unsubstituted-acrylamides hits 
-- [ ] hit screening for beta-sub-acrylate-esters hits 
 - [ ] start looking into grant application 
 	- [ ] what is needed
 	- [ ] outline of essays
 	- [ ] send letter of rec emails
+
 - [ ] do practice problems for BIOSTAT 602
+
 - [ ] read BIOINF 602 paper 
 	- [ ] [Viral genomes reveal patterns of the SARS-CoV-2 outbreak in Washington State](https://www.science.org/doi/full/10.1126/scitranslmed.abf0202?rfr_dat=cr_pub++0pubmed&url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org)
+
 - [ ] do BIOSTAT 601 HW 
+
 - [x] do BIOINF 500 HW 
-- [ ] do BIOINF 575 exercises
+
+- [x] do BIOINF 575 exercises
+
 - [ ] finish reading:
 	- [ ]  [Martin et al. 2021](martin_2021) 
 			[*State of the Art Iterative Docking with Logistic Regression and Morgan Fingerprints*](https://chemrxiv.org/engage/chemrxiv/article-details/60c756f8bb8c1a4fa63dc6e2)

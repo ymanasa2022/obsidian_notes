@@ -53,3 +53,9 @@ Morgan Fingerprints:
 - alternate to single iterations is active learning 
 	- random forest, neural network or message-passing graph neural network to regress molecule structure against docking score 
 	- Graff et al
+
+### Discussion 
+- alternate to brute force search is iterative docking 
+- a surrogate model is trained on random sample to steer towards high-scoring ligands 
+- using morgan fingerprints with pharmacacophoric features and logistic regression shows a 10-fold enrichment over brute force search 
+- goal: to minimize implementation cost by using fast featurization and learning algorithms 

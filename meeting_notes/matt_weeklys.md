@@ -112,7 +112,7 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 
 # Aug 23, 2023 (Wed)
 ## Things discussed
-1. I think we should make some kind of project outline for the TgCLP docking project, similar to the one you made for co-expression project -- started making [my own](toxo_data_curation)
+1. I think we should make some kind of project outline for the TgCLP docking project, similar to the one you made for co-expression project -- started making [my own](toxo_doc_outline.md)
 2. the data curation we are doing is for making a ligand dataset for retrospective assessment for tgcpl docking? yes
 3. are we docking multiple receptor poses to multiple ligands or just multiple ligands to one receptor pose? are we also docking multiple receptors (human and tgcpl proteins?) with multiple ligands?
 4. Met with Lydia about previous projects. She was suggesting I write a short application note for the journal of bioinformatics for our structure/function pipeline once its fully working. Passed on other projects with documentation. She thought it was cool that we were using it for toxo and hence thinks writing a short paper on this would be nice for me 
@@ -167,12 +167,12 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 	- [ ] start docking
 # Aug 30, 2023 (Wed)
 ## Things Discussed 
-- make [library](toxo_data_curation) using guide to pharmacology.com, chemb, pubchem, binding db
+- make [library](toxo_doc_outline.md) using guide to pharmacology.com, chemb, pubchem, binding db
 	- one zinc id might correspond to different chmbl molecules. toxoplasma cpl and human cpL
 	- get list of compounds from pChEMBL for a given target
 	- for a given assay, get list of compounds 
 	- take out ones with low pChEMBL Values and ones with comments in data validity. repeat for human cpl
-- Test running [Covalent](covalent_docking_TgCPL_test.md) docking on greatlakes with existing database 
+- Test running [Covalent](covalent_docking_test.md) docking on greatlakes with existing database 
 ## To do for the week
 - [x] curate small compounds that dock to tgcpl
 	- R05 Violations (drug bioaccessibility rules)? if more than 0, take out?
@@ -196,6 +196,7 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 	 - [ ] [Adeshina et al. 2020](https://www.pnas.org/doi/10.1073/pnas.2000585117) 
 			*Machine learning classification can reduce false positives in structure-based virtual screening* 
 # Sep 6, 2023
+## Things Discussed 
 - data curation for HsCPL and TgCPL 
 	- remove anything that doesnt report in nM (needs to be less than 1000nM for IC50 and Ki)
 	- Inhibition given in percentages need to be taken out 
@@ -212,7 +213,7 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 	- maybe try to automate
 	- need three files (examples can be found in: `/Users/ymanasa/Library/CloudStorage/OneDrive-MichiganMedicine/omeara_lab/TgCPL/Docking/example_hit_screen`)
 		1. load rec.crg.pdb and xtal-lig.pdb 
-		2. do visuale manipulations to make one pdb transparent and the other not 
+		2. do visual manipulations to make one pdb transparent and the other not 
 		3. make sure you can visualize the original drug ligand in the protein pocket
 		4. load the poses.mol2 file that come from after processing the docking results on greatlakes 
 		5. use visual analysis to decide which ligands to keep and which ones to discard 
@@ -220,32 +221,81 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 	- email Dr. Uhler-- probably meet up with him 
 	- email Dr. Paula-- zoom?
 ## To do for the week 
-- [x] continue data curation for HsCPL and TgCPL
-- [ ] test covalent docking with unsubstituted-acrylamides 
-- [ ] hit screening for unsubstituted-acrylamides hits 
-- [ ] hit screening for beta-sub-acrylate-esters hits 
-- [ ] test covalent docking with beta-sub-acrylate-esters
-
+- [x] finish data curation for HsCPL and TgCPL
+- [x] test covalent docking with unsubstituted-acrylamides 
+- [x] test covalent docking with beta-sub-acrylate-esters
 - [x] email Dr. Paula 
 	- [ ] set up zoom time (she wont respond until sept 15)
 - [x] email Dr. Uhler and Dr. Thompson
 	- [ ] set up meetup time 
-- [ ] start looking into grant application 
-	- [ ] what is needed
-	- [ ] outline of essays
-	- [ ] send letter of rec emails
+- [x] start looking into grant application 
+	- Essays needed (~300 words each):
+		- Question 1 Essay - How did you choose your field and what are your primary expectations of your future career?
+		- Question 2 Essay - How does your proposed field of study and career constitute an application of the physical sciences or engineering?
+		- Question 3 Essay - What are the considerations involved in your choice of graduate school?
+		- Question 4 Essay - Chronological Synopsis
+		- This is an opportunity for you to share your narrative with experiences that demonstrate your creativity, perseverance, curiosity and/or grit. Personal Essay response
+		- Academic Honors: dean's list
+		- list research projects and choose one or two projects that best exemplify your own creativity and discuss in more detail what you personally contributed to them.x`
+- [ ] finish practice problems for BIOSTAT 602 HW1
+- [x] read BIOINF 602 paper 
+	- [x] [Viral genomes reveal patterns of the SARS-CoV-2 outbreak in Washington State](https://www.science.org/doi/full/10.1126/scitranslmed.abf0202?rfr_dat=cr_pub++0pubmed&url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org)
+- [ ] finish BIOSTAT 601 HW 
+- [x] finish BIOINF 500 HW 
+- [x] finish BIOINF 575 exercises
+- [x] finish reading:
+	- [x]  [Martin et al. 2021](martin_2021) 
+			[*State of the Art Iterative Docking with Logistic Regression and Morgan Fingerprints*](https://chemrxiv.org/engage/chemrxiv/article-details/60c756f8bb8c1a4fa63dc6e2)
+- [x] watch: [https://www.youtube.com/@SerranoAcademy](https://www.youtube.com/@SerranoAcademy) 
+- [x] Finish training: Cultivating a Culture of Respect
 
-- [ ] do practice problems for BIOSTAT 602
+# Sep 13, 2023
+## Things Discussed 
+- data curation for commercially available ligands used in covalent docking 
+	- Take out ED50s if done in animal models and if greater than 1uM standard value 
+	- if done in cells dont remove. functional assays too rather than molecular assays 
+- CDD vault for testing retrospective docking using experimentally assessed ligands 
+	- why are some missing in the search (126 out of 133 showing)
+	- need to figure out how to pull molecules and pull activity data 
+	- look at tutorials or manuals 
+- covalent docking with unsubstituted-acrylamides 
+	- androgen_20230818,zinc_instock,,20230908 (works)
+	- androgen_cov_20230908,zinc_instock,,20230908 (works)
+	- tgcpl_cov_20230911,unsubstituted_acrylamides,,20230911
+	- tgcpl_cov_20230911,zinc_instock,tgcpl_zinc,20230911
+	- androgen_cov_20230908,unsubstituted_acrylamides,,20230911
+	- tgcpl_cov_20230911,unsubstituted_acrylamides_lead-like,,20230911
+	- tgcpl_cov_20230911,beta_sub_acrylate_esters_frag,,20230911
+	- fragments or lead-like? just do both but start with fragments. they are better (bc they are smaller, easier to synthesize, less metabolic liabilities) 
+	- add lines from: `${DOCK_TEMPLATE}/scripts/dock_indock_tight_covalent.sh` to `2_finalize_structure.sh``/home/ymanasa/opt/dock_campaign_template/prepared_structures/TEMPLATE_COVALENT/2_finalize_structure.sh` (then commit)
+- covalent docking with beta-sub-acrylate-esters 
+	- fragments or lead-like? start with fragments and then see how the hits look before doing lead-like docking
+	- same issue as previous
+- [ENAMINE](https://enamine.net/compound-collections/covalent-compounds)
+	- commercial list of covalent compounds
+	- might compare to these later 
+	- preprints/reach out to DOCK: best covalent libraries to use with DOCK? 
+		- Nir London, Widesman in Israel covalent dock 
+- covalent interactions towards cys or lys. check geometries for hit poses
+	- allow it to export clashes and see if we can change step size/covalent library/minimization to try to fit more properly to protein 
+	- this is the docking model optimization step 
+## Things to do 
+- [ ] finish data curation 
+- [ ] fix covalent docking scripts 
+- [ ] finish docking to unsub-acrylamides 
+	- start with fragments
+- [ ] finish docking to acrylate esters 
+- [ ] start hit screening for unsub-acrylamides
+- [ ] start hit screening for acrylate esters 
 
 - [ ] read BIOINF 602 paper 
-	- [ ] [Viral genomes reveal patterns of the SARS-CoV-2 outbreak in Washington State](https://www.science.org/doi/full/10.1126/scitranslmed.abf0202?rfr_dat=cr_pub++0pubmed&url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org)
-
+	- [ ] [Spatial epigenome-transcriptome co-profiling of mammamlian tissues](https://www.nature.com/articles/s41586-023-05795-1)
+	
 - [ ] do BIOSTAT 601 HW 
+- [ ] do BIOSTAT 601 Practice Qs
 
-- [x] do BIOINF 500 HW 
+- [ ] send reminder emails to Paula and Uhler
+- [ ] start grant essays 
 
-- [x] do BIOINF 575 exercises
-
-- [ ] finish reading:
-	- [ ]  [Martin et al. 2021](martin_2021) 
-			[*State of the Art Iterative Docking with Logistic Regression and Morgan Fingerprints*](https://chemrxiv.org/engage/chemrxiv/article-details/60c756f8bb8c1a4fa63dc6e2)
+- [ ] Tools & Tech Seminar (Thurs)
+- [ ] Diffusion MIDAS symposium (Fri)

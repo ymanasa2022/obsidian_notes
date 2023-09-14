@@ -75,3 +75,23 @@ to sort and count unique elements in the 4th and 5th column
 
 >>> history | cut -c 8- | tail -n 50 > commands_bash_090723.txt
 save the last 50 terminal commands to a txt file
+
+>>> grep -v '>' BRCA1_sequence.fa | head -n 2 > DNA_seq.txt
+to get the first 2 lines, excluding the first descriptor line that has '>'
+
+>>> tr ATGC TACG < DNA_seq.txt | tr "\n" _ | rev
+replaces all the As with Ts, Ts with As, G with Cs, C with Gs in DNA_seq.txt | replace new lines with _ so that rev can reverse the entire RNA sequence to correctly translate 
+
+
+>>> grep -o ATGC BRCA1_seq.fasta
+will search for ATGC pattern. it will not tell you where they are unless we dont use the -o flag
+WARNING: if there is a sequence: ATGATGA and we grep ATGA, it will only show the first ATGA and ignore the next one because of the overlap  
+
+>>> sed "s/ATAGGAT/X\n/g" BRCA1_sequence.fa | grep X | wc -l
+will replace ATAGGAT with X and new line then we find all the X's and then count the number of these occurrences using wc -l 
+
+>>> grep -o [GC] BRCA1_sequence.fa | wc -l
+square brackets can be used to match multiple letters 
+
+>>> grep -v '^#' TNBC_sample.vcf | awk '$1\==1 && $6\==24' 
+this will exclude lines starting with # and then search for lines in column 1 that have value of 1 and will search through column 6 to find rows that have a value of 24. we can use wc -l to count the occurrences 

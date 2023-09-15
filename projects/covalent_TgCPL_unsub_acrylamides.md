@@ -63,6 +63,10 @@
   - also to run lines after running `dock_blastermaster_standard.sh` in `1_prepare_structure.sh`, I made everything one single line using &&: `source ${DOCK_TEMPLATE}/scripts/dock_blastermaster_standard.sh && mv working working_standard && cp working_standard/rec.crg.pdb rec.pdb && mkdir working`
 	- actually ended up diving all commands into 4 different shell scripts 
 		- try running all these scripts sequentially: source 1_prepare_structure.sh; source 2_prepare_structure.sh; source 3_prepare_structure.sh; source 4_prepare_structure.sh; source 2_finalize
+		- this didnt work
+		- keeping all files separate, run one after the other manually 1-4 prepare_structure.sh scripts 
 # Docking run: 
 - docking upon `/prepared_structures/tgcpl_cov_20230911`
+- `tgcpl_cov_20230911,unsubstituted_acrylamides_frag,,20230914`
 - using unsub acrylamides DB 
+### Error: ![[segmentation_fault_tgcpl_unsub_acrlyamides.png]]

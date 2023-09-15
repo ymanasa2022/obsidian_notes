@@ -297,5 +297,5 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 - [ ] send reminder emails to Paula and Uhler
 - [ ] start grant essays 
 
-- [ ] Tools & Tech Seminar (Thurs)
+- [x] Tools & Tech Seminar (Thurs)
 - [ ] Diffusion MIDAS symposium (Fri)

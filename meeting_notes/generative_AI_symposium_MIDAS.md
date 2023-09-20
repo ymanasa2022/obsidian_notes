@@ -89,7 +89,7 @@
 	- costly acquisition, imaging artifacts and high computational/memory requirements 
 - forward model: y = A(x) + e
 - image prior: x ~ p_x
-- noise model: e ~ N(0, sigma^2*I)
+- noise model: e ~ N(0, sigma^2(I)) also given by v
 - sampling images from p_x is equivalent to obtaining a vector from a lower-dimensional and non-linear subset x of real numbers
 - Maximum a posteriori probability (MAP) estimator motivates formulation as a composite optimization 
 - Image denoising is an inverse problem that often can be related to the proximal operator 
@@ -104,3 +104,31 @@
 - DOLCE is a model based generative network that uses a conditional image denoiser as a prior 
 - Deep continuous artifact-free fields (DeCAF) reconstructs images represented continuously as a neural network 
 - DeCAF represents the derived image continuously using an implicit neural representation (INR) 
+## [Deep Generative Physical Modeling for Medical Imaging and Wireless Communications ](gaps_ideas.md#MIDAS_AI#gap1)
+- multiple input multiple output communications 
+- matrix of transmit and receive pairs, channel state information for good reliable communications 
+- signal is the fourier transform of the image 
+- collecting data = time consuming, common problem is to collect less data and then use generative AI to generate a better final image with lesser data 
+- y = A(x); A is the random gaussian measurement function. x is the image
+##### end to end supervised training
+- trying to learn to invert the forward model with deep networks 
+	- choosing ground truth is very important 
+	- deep network is coupled to the measurement process (sampling pattern cant change in test)
+	- deep network is tuned to perform well on knee if trained with knee data and on brain if trained with brain data, not generalized because so many parameters are tuned to the training set 
+	- estimating uncertainty is hard
+##### goal: estimate the image from noisy measurements 
+- likelihood function: describe the imaging physics p(y|x)
+- prior knowledge: probability distribution for the image p(x)
+- multi constrast diffusion model 
+- freeze the model and fine tune the hyperparameters for our particular imaging protocol 
+
+## Foundation Models, Generative Models and Inverse Problems 
+- multiresolution textual inversion: teaching new concepts to SD 
+
+## Deep Networks and the mutiple manifold problem 
+- model problem: sparse approximation 
+	- recover sparse x_0 from observations y = Ax_0 
+## Understanding diffusion model objectives from ELBO perspective 
+- diffusion model tutorials from google
+- most are based on a likelihood based models optimized towards minimizing the log likelihood ELBO 
+- progressive distillation: to make sampling fasters

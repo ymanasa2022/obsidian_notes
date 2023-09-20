@@ -1,0 +1,11 @@
+- Get covalent docking to work w enamine libraries 
+- Validate that those look ok 
+- Dock to CDD vault compounds 
+- Validate that those look ok again 
+- Create new libraries with the experiment compounds with different warheads or R groups— get a new set of ideas and compounds
+- Dock those 
+- Validate those
+- Experimentally test best ones
+- MDD vault meetings twice a month 
+- Triozol backbone ones are old — Three nitrogens on the ring, the fluorescence assay wasn’t great 
+- talk to Martin about the assay (October first week)

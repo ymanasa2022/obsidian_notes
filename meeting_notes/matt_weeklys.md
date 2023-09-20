@@ -280,22 +280,45 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 	- allow it to export clashes and see if we can change step size/covalent library/minimization to try to fit more properly to protein 
 	- this is the docking model optimization step 
 ## Things to do 
-- [ ] finish data curation 
-- [ ] fix covalent docking scripts 
+
+- [x] fix covalent docking scripts 
+
+- [x] read BIOINF 602 paper 
+	- [x] [Spatial epigenome-transcriptome co-profiling of mammamlian tissues](https://www.nature.com/articles/s41586-023-05795-1)
+
+- [x] do BIOSTAT 601 HW 
+- [x] do BIOINF 575 HW
+- [x] do BIOSTAT 601 Practice Qs
+
+- [x] send emails to Uhler
+- [x] send email to Paula
+
+- [x] Tools & Tech Seminar (Thurs)
+- [x] Diffusion MIDAS symposium (Fri)
+
+# Sep 20, 2023
+## Things Discussed
+- debugging docking
+
+## Things to do 
 - [ ] finish docking to unsub-acrylamides 
 	- start with fragments
 - [ ] finish docking to acrylate esters 
 - [ ] start hit screening for unsub-acrylamides
 - [ ] start hit screening for acrylate esters 
 
-- [ ] read BIOINF 602 paper 
-	- [ ] [Spatial epigenome-transcriptome co-profiling of mammamlian tissues](https://www.nature.com/articles/s41586-023-05795-1)
-	
-- [ ] do BIOSTAT 601 HW 
-- [ ] do BIOSTAT 601 Practice Qs
+- [ ] finish data curation 
 
-- [ ] send reminder emails to Paula and Uhler
-- [ ] start grant essays 
+- [ ] Read RiffDock paper
+- [ ] start grant essays
+	- [ ] finalize meeting with uhler and thompson
+	- [ ] finalize meeting with paola
 
-- [x] Tools & Tech Seminar (Thurs)
-- [ ] Diffusion MIDAS symposium (Fri)
+- [ ] Tools and Tech (Thur)
+- [ ] BISTRO (Thur) 
+- [ ] Bioinf Retreat (Fri-Sat)
+
+- [ ] BIOSTAT 601 HW
+- [ ] BIOSTAT 601 Practice Q
+- [ ] BIOINF 602 Paper
+- [ ] BIOINF 575 HW

@@ -68,5 +68,12 @@
 # Docking run: 
 - docking upon `/prepared_structures/tgcpl_cov_20230911`
 - `tgcpl_cov_20230911,unsubstituted_acrylamides_frag,,20230914`
-- using unsub acrylamides DB 
+- using unsub acrylamides fragments DB 
 ### Error: ![[segmentation_fault_tgcpl_unsub_acrlyamides.png]]
+might be because something was wrong with lighthouse
+
+## Sep 18: Re-docking 
+- docking upon `/prepared_structures/tgcpl_cov_20230911` using unsubstituted_acrylamides_frag
+- `tgcpl_cov_20230911,unsubstituted_acrylamides_frag,,20230918`
+- still doesnt work. talk to matt
+- 

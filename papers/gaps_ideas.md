@@ -57,3 +57,11 @@ authors think incorporating quantum level approaches to predict reactivity of sp
 ## martin_2021
 #### idea 1
 docking requires a crystal structure. but we would be missing important targets if we skip them just because proteins do not have a crystal structure. we can use the structure/function prediction pipeline to get at least a structure prediction of high enough quality to dock to instead of trying to get a crystal structure before determining whether we can find good drug ligand candidates targeting the inhibition of the protein 
+
+## MIDAS_AI
+##### note1
+good math explanation
+good explanation of pros and cons of diffusion vs end to end
+
+##### idea1
+can use simulated data for training data/test data when there isn't enough experimental data (for docking esp)

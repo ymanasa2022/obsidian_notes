@@ -267,7 +267,7 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 	- tgcpl_cov_20230911,unsubstituted_acrylamides_lead-like,,20230911
 	- tgcpl_cov_20230911,beta_sub_acrylate_esters_frag,,20230911
 	- fragments or lead-like? just do both but start with fragments. they are better (bc they are smaller, easier to synthesize, less metabolic liabilities) 
-	- add lines from: `${DOCK_TEMPLATE}/scripts/dock_indock_tight_covalent.sh` to `2_finalize_structure.sh``/home/ymanasa/opt/dock_campaign_template/prepared_structures/TEMPLATE_COVALENT/2_finalize_structure.sh` (then commit)
+	- add lines from: `${DOCK_TEMPLATE}/scripts/dock_indock_tight_covalent.sh` `2_finalize_structure.sh`to `/home/ymanasa/opt/dock_campaign_template/prepared_structures/TEMPLATE_COVALENT/2_finalize_structure.sh` (then commit)
 - covalent docking with beta-sub-acrylate-esters 
 	- fragments or lead-like? start with fragments and then see how the hits look before doing lead-like docking
 	- same issue as previous
@@ -298,8 +298,12 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 
 # Sep 20, 2023
 ## Things Discussed
-- debugging docking
-
+- debugging docking 
+- matt concluded that DOCK 3.8 is the issue
+	- need to use to DOCK 3.7 instead 
+	- test database here: `/home/ymanasa/turbo/nSMase2/fragment_screen/databases/manasa1_test`
+	- structure used: `/home/ymanasa/turbo/nSMase2/fragment_screen/prepared_structures/A0773_covalent_20220203`
+	- docking run: `/home/ymanasa/turbo/nSMase2/fragment_screen/docking_runs/manasa_test1`
 ## Things to do 
 - [ ] finish docking to unsub-acrylamides 
 	- start with fragments
@@ -309,16 +313,15 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 
 - [ ] finish data curation 
 
-- [ ] Read RiffDock paper
+- [ ] Read DiffDock paper
 - [ ] start grant essays
-	- [ ] finalize meeting with uhler and thompson
+	- [x] finalize meeting with uhler and thompson
 	- [ ] finalize meeting with paola
 
-- [ ] Tools and Tech (Thur)
-- [ ] BISTRO (Thur) 
-- [ ] Bioinf Retreat (Fri-Sat)
+- [x] Tools and Tech (Thur)
+- [x] BISTRO (Thur) 
+- [x] Bioinf Retreat (Fri-Sat)
 
 - [ ] BIOSTAT 601 HW
 - [ ] BIOSTAT 601 Practice Q
-- [ ] BIOINF 602 Paper
-- [ ] BIOINF 575 HW
+- [x] BIOINF 575 HW

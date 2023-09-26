@@ -70,10 +70,32 @@
 - `tgcpl_cov_20230911,unsubstituted_acrylamides_frag,,20230914`
 - using unsub acrylamides fragments DB 
 ### Error: ![[segmentation_fault_tgcpl_unsub_acrlyamides.png]]
-might be because something was wrong with lighthouse
+
 
 ## Sep 18: Re-docking 
 - docking upon `/prepared_structures/tgcpl_cov_20230911` using unsubstituted_acrylamides_frag
 - `tgcpl_cov_20230911,unsubstituted_acrylamides_frag,,20230918`
 - still doesnt work. talk to matt
-- 
+	- matt tried with dock37, should work
+- changed the `$DOCKTEMPLATE` path to DOCK 37 in `setup_environment.sh `
+- got this error: ![[dock37_test.png]]
+
+- the subdock.bash file comes from the `$DOCKTEMPLATE/docking/submit/slurm` directory but the path in `/home/ymanasa/turbo/projects/TgCPL/docking-campaigns/docking_campaigns_local/dock_submit.sh` is incorrect 
+	- changed this; `bash ${DOCKBASE}/docking/submit/subdock.bash` to:
+		- `bash ${DOCKBASE}/docking/submit/slurm/subdock.bash`
+		- using dock_submit.sh from: `/home/ymanasa/turbo/projects/TgCPL/docking-campaigns/docking_campaigns_local/dock_submit.sh`
+- ![[fewer_errors_dock37.png]]
+
+- dock64 is not in DOCK37??? ![[no_dock64_in_DOCK37.png]]
+	- might need to check dock_submit.sh file that matt was using
+		- a dock_submit.sh script was not used in the prev testing sesh with matt. 1_run.sh == 1_submit.sh+dock_submit.sh in:  `/home/ymanasa/turbo/projects/TgCPL/docking-campaigns/docking_campaigns_local/docking_runs/tgcpl_cov_20230911,unsubstituted_acrylamides_frag,,20230923/1_run.sh` 
+		- 1_run.sh uses the right path to dock64: `${DOCKBASE}/docking/DOCK/bin/dock64`
+		- dock_submit.sh uses `${DOCKBASE}/docking/DOCK/dock64` - changing it to include` bin/`
+- ![[scratch_dir_error_DOCK37.png]]
+- try to running from `/nfs/turbo/umms-maom/nSMase2/fragment_screen/docking_runs/manasa_test1`
+	- editing the setup_environment.sh file in `/nfs/turbo/umms-maom/nSMase2/fragment_screen`
+		- leaving this to access matt's dock_campaign_template 
+			- `export DOCK_TEMPLATE=/home/maom/opt/dock_campaign_template` instead of `/home/ymanasa/opt/dock_campaign_template`
+		- that didnt work. permission issues: 
+			- changed DOCK_TEMPALTE to `/home/ymanasa/opt/dock_campaign_template`
+			- I think I have the wrong DOCKTEMPLATE ![[DOCK_analysis_dir_DNE.png]]

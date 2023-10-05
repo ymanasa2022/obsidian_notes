@@ -112,7 +112,7 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 
 # Aug 23, 2023 (Wed)
 ## Things discussed
-1. I think we should make some kind of project outline for the TgCLP docking project, similar to the one you made for co-expression project -- started making [my own](toxo_doc_outline.md)
+1. I think we should make some kind of project outline for the TgCLP docking project, similar to the one you made for co-expression project -- started making [my own](toxo_dock_outline.md)
 2. the data curation we are doing is for making a ligand dataset for retrospective assessment for tgcpl docking? yes
 3. are we docking multiple receptor poses to multiple ligands or just multiple ligands to one receptor pose? are we also docking multiple receptors (human and tgcpl proteins?) with multiple ligands?
 4. Met with Lydia about previous projects. She was suggesting I write a short application note for the journal of bioinformatics for our structure/function pipeline once its fully working. Passed on other projects with documentation. She thought it was cool that we were using it for toxo and hence thinks writing a short paper on this would be nice for me 
@@ -167,7 +167,7 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 	- [ ] start docking
 # Aug 30, 2023 (Wed)
 ## Things Discussed 
-- make [library](toxo_doc_outline.md) using guide to pharmacology.com, chemb, pubchem, binding db
+- make [library](toxo_dock_outline.md) using guide to pharmacology.com, chemb, pubchem, binding db
 	- one zinc id might correspond to different chmbl molecules. toxoplasma cpl and human cpL
 	- get list of compounds from pChEMBL for a given target
 	- for a given assay, get list of compounds 
@@ -307,21 +307,109 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 ## Things to do 
 - [ ] finish docking to unsub-acrylamides 
 	- start with fragments
-- [ ] finish docking to acrylate esters 
-- [ ] start hit screening for unsub-acrylamides
-- [ ] start hit screening for acrylate esters 
 
-- [ ] finish data curation 
-
-- [ ] Read DiffDock paper
-- [ ] start grant essays
+- [x] grant meetings?
 	- [x] finalize meeting with uhler and thompson
-	- [ ] finalize meeting with paola
+	- [x] finalize meeting with paola
 
 - [x] Tools and Tech (Thur)
 - [x] BISTRO (Thur) 
 - [x] Bioinf Retreat (Fri-Sat)
 
-- [ ] BIOSTAT 601 HW
-- [ ] BIOSTAT 601 Practice Q
+- [x] BIOSTAT 601 HW
+- [x] BIOINF 575 HW 
 - [x] BIOINF 575 HW
+
+- [x] wed: 11am JC Rosetta Diffusion Models 
+- [x] wed: 11:30am BIOSTAT Office Hrs 
+- [x] wed: 1pm weekly one on one
+# Sep 27, 2023
+## Things discussed
+- debugging docking 
+	- docking with toxo and unsub acrylamides works 
+	- continue with results and hit screening analysis
+- prelim meeting
+	- not bad idea to do prelim beginning of 2nd year
+	- need to keep reading ml papers
+	- https://www.bakerlab.org/2023/07/11/diffusion-model-for-protein-design/
+	- RFDiffusion 
+- CDD Vault
+	- need to curate these once Martin is done uploading stuff 
+	- SMILES and SMARTS needed to make covalent libraries 
+- add to rosetta slack-- didnt get last message/email with paper details
+## Things to do for the next week 
+- [x] make dock3.7 work 
+- [x] attempt docking to unsub-acrylamides 
+	- start with fragments
+- [ ] analyze results
+
+- [ ] BIOSTAT 601 practice Qs
+	- [ ] study for midterm (practice exam)
+- [x] BIOINF 575 HW
+- [ ] BIOINF 602 Reading 
+- [x] BIOINF 500 HW 
+
+- [x] attend update meetings 
+	- [x] fri: 3pm Uhler + Thompson
+	- [x] thur: 7:45pm Paola 
+- [x] thur: tools and tech seminar 
+
+- [x] benefits review 
+# Oct 4, 2023
+## Things discussed
+- ***DOCK3.7 docking testing:*** 
+	- made my own `1_run.sh` script called `1_submit.sh script `
+	- changes were made to `/home/ymanasa/turbo/opt/DOCK37/analysis/extract_all_blazing_fast.py`
+	- Take a look at `results/1/OUTDOCK.0`: 
+		- doesn't seem complete
+		- there's 5 ligands in 1.db2.gz and 10 poses for each were tested out 
+		- awk '{print $1}' OUTDOCK.0  | grep '5' -> only 3 
+		- the rest were 10 poses each
+	- need to figure out why slurm job is ending early (might be a wall time issue: try adding $SLURMARG for wall time in 1_submit.sh for docking_run)
+- ***docking analysis:***
+	- changing python 2 code to python 3 in `/home/ymanasa/turbo/opt/DOCK37/analysis/extract_all_blazing_fast.py`
+	- had to manually remove lines that didnt have valid energy entries (non int values)
+	- getting this error when running **getposes_blazing_faster_py3.py**: 
+	  `gzip: results/4/test.mol2.gz.0: unexpected end of file` -> might be because of the slurm issue
+- ***poses analysis*** 
+	1. File -> Open -> rec.pdb and poses.mol2
+	2. Favorites -> Model Panel 
+		- to show or hide molecules loaded
+	3. Select -> Chain -> A -> rec.pdb 
+		- to select receptor chain 
+	4. Actions -> Atoms & Bonds -> show 
+	5. Select -> chain -> A -> rec.pdb
+	6. Actions -> Ribbons -> hide
+	7. Select -> chain -> A -> rec.pdb
+	8. Actions -> Surface -> show -> set transparency 70%
+	9. Remove HC atoms from ligand 
+	10. Tools -> Structure Analysis -> FindH bonds
+	11. Tools -> Viewing -> Side View 
+		- Surface capping: uncheck cap surfaces at clip panes 
+		- change boundaries to focus on ligand in pocket
+	12. Tools -> Surface Binding Analysis -> ViewDock -> Select all poses -> move to deleted 
+	13. Assess if each ligand is forming reasonably accurate covalent bonds 
+- ***dock other covalent subsets*** 
+	- ENAMINE covalent libraries
+- ***preparing project covalent ligands***:
+	- must add *Si* atom to ligands at docking points
+	- to get output.ism: `/home/ymanasa/turbo/CovalentLibs/scripts/unsat-ab-carbonyl.py `
+	- input example in `/home/ymanasa/turbo/CovalentLibs/unsubstituted-acrylamides/fragments/smiles/unsub.frag.acrylamides.ism`
+	- SMILES from Martin's excel 
+	- SMILES vs SMARTS? 
+	- get chemdraw to work 
+	- use chem draw to assess reactions 
+- ***R01 Update***
+	- essentially want a 3D image and 2D image of the best ligand (from grant maybe or ENAMINE) in TgCPL 
+	- proteins dock plus: pdb file input and finds the ligands to make 2D interaction figure 
+## Things to do for the next week
+#### HW 
+- [ ] Skim BIOINF 602 paper for 10/11
+- [ ] Really Read BIOINF 602 paper for Review 10/13
+- [ ] BIOINF 575 HW
+- [ ] BIOINF 601 HW
+- [ ] PIBS 503 reading (10/5)
+- [ ] PIBS 503 reading (10/6)
+- [ ] Read Rosetta JC paper (RFDiffusion)
+
+#### Research

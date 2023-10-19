@@ -341,12 +341,12 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 - [x] make dock3.7 work 
 - [x] attempt docking to unsub-acrylamides 
 	- start with fragments
-- [ ] analyze results
+- [x] analyze results
 
-- [ ] BIOSTAT 601 practice Qs
-	- [ ] study for midterm (practice exam)
+- [x] BIOSTAT 601 practice Qs
+	- [x] study for midterm (practice exam)
 - [x] BIOINF 575 HW
-- [ ] BIOINF 602 Reading 
+- [x] BIOINF 602 Reading 
 - [x] BIOINF 500 HW 
 
 - [x] attend update meetings 
@@ -373,29 +373,36 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 	  `gzip: results/4/test.mol2.gz.0: unexpected end of file` -> might be because of the slurm issue
 - ***poses analysis*** 
 	1. File -> Open -> rec.pdb and poses.mol2
-	2. Favorites -> Model Panel 
-		- to show or hide molecules loaded
 	3. Select -> Chain -> A -> rec.pdb 
 		- to select receptor chain 
 	4. Actions -> Atoms & Bonds -> show 
-	5. Select -> chain -> A -> rec.pdb
+	5. Select -> chain -> A 
 	6. Actions -> Ribbons -> hide
-	7. Select -> chain -> A -> rec.pdb
+	7. Select -> chain -> A 
 	8. Actions -> Surface -> show -> set transparency 70%
-	9. Remove HC atoms from ligand 
-	10. Tools -> Structure Analysis -> FindH bonds
-	11. Tools -> Viewing -> Side View 
+	9. Actions -> Color -> by heteroatom (everything not C or H)
+	10. Select -> Chemistry -> IDATM type -> HC 
+	11. Actions -> Atom & Bonds -> hide
+	12. Tools -> Structure Analysis -> FindH bonds
+		- uncheck intra molecule and residue H bonds 
+	13. Tools -> Viewing -> Side View 
 		- Surface capping: uncheck cap surfaces at clip panes 
 		- change boundaries to focus on ligand in pocket
-	12. Tools -> Surface Binding Analysis -> ViewDock -> Select all poses -> move to deleted 
-	13. Assess if each ligand is forming reasonably accurate covalent bonds 
+	14. Tools -> Surface Binding Analysis -> ViewDock -> Select all poses -> move to delete
+	15. in ViewDock -> Column -> Total Energy 
+		- arrange based on total energy (more negative the better)
+	16. Favorites -> Model Panel 
+		- hide the first poses.mol2 
+	17. Assess if each ligand is forming reasonably accurate covalent bonds 
+		- change compound state to viable if ligand looks ok 
+		- keep in deleted if not good
 - ***dock other covalent subsets*** 
 	- ENAMINE covalent libraries
 - ***preparing project covalent ligands***:
 	- must add *Si* atom to ligands at docking points
-	- to get output.ism: `/home/ymanasa/turbo/CovalentLibs/scripts/unsat-ab-carbonyl.py `
-	- input example in `/home/ymanasa/turbo/CovalentLibs/unsubstituted-acrylamides/fragments/smiles/unsub.frag.acrylamides.ism`
-	- SMILES from Martin's excel 
+	- to get ligands prepped for covalent docking use: `/home/ymanasa/turbo/CovalentLibs/scripts/unsat-ab-carbonyl.py `
+		- input file example in `/home/ymanasa/turbo/CovalentLibs/unsubstituted-acrylamides/fragments/smiles/unsub.frag.acrylamides.ism`
+		- SMILES from Martin's excel 
 	- SMILES vs SMARTS? 
 	- get chemdraw to work 
 	- use chem draw to assess reactions 
@@ -404,12 +411,144 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 	- proteins dock plus: pdb file input and finds the ligands to make 2D interaction figure 
 ## Things to do for the next week
 #### HW 
-- [ ] Skim BIOINF 602 paper for 10/11
-- [ ] Really Read BIOINF 602 paper for Review 10/13
-- [ ] BIOINF 575 HW
-- [ ] BIOINF 601 HW
-- [ ] PIBS 503 reading (10/5)
-- [ ] PIBS 503 reading (10/6)
-- [ ] Read Rosetta JC paper (RFDiffusion)
+- [x] Take BIOSTAT 602 Exam 
+- [x] Skim BIOINF 602 paper for 10/11 https://www.nature.com/articles/s41587-021-00949-w
+- [x] BIOINF 575 HW
+- [x] PIBS 503 reading (10/5)
+- [x] PIBS 503 reading (10/6)
+- [x] Read Rosetta JC paper 
 
 #### Research
+- [x] change dock_template scripts 
+- [x] move everything to turbo/projects/TgCPL dir
+- [x] poses analysis
+- [x] determine docking slurm issue 
+	- [x] make sure it works
+- [x] dock other covalent libraries 
+- [ ] prepare covalent ligands from Martin 
+	- [x] sent email to chem draw people for activation 
+#### Meetings
+- [x] attend PIBS 503 Mentoring Relationships Meeting
+- [x] attend PIBS 503 Authorship & Peer Review (F)
+- [x] Molecular Modeling Meeting (F)
+- [x] ML JC Rosetta (10/11 W)
+- [x] Weekly w. Matt (10/11 W)
+
+# Oct 9, 2023
+## Things discussed
+- pose analysis
+	- understand what the charges on each group are
+		- we want non polar groups buried in the pocket 
+		- lesser repulsive groups (oxygen in ligand and oxygen in receptor shouldnt be next to each other)
+		- the Si atom placement dictates to the model where the covalent interaction will be taking place 
+		- benzene rings sp2 hybridized -> negative?
+	- understand the protonation states for functional groups in an acidic environment
+		- our tgcpl is in lysome so the environment is slightly acidic not neutral (pH ~6.0-- confirm with literature)
+		- pka calculations might be needed to confirm these protonation states 
+			- either done by hand or use software (ask Matt)
+	- need to do for all ENAMINE libraries
+- pull request assessment ([[covalent_TgCPL_ENAMINE_libs]]) 
+	- resolve git issues for docking_campaings repo 
+	- slurm issues resolved 
+- preparing ligands for covalent docking 
+	- created `martin_cdd_09132023.ism` in `/home/ymanasa/turbo/CovalentLibs/martin_cdd`
+	- used columns C D to create tab spaced file `martin_cdd_09132023.ism` 
+	- need to use chem draw to figure out line 19 in `/home/ymanasa/turbo/CovalentLibs/scripts/martin_09132023.py`
+	- how to know what the reactive group is?
+		- compared to an unsat acrylamide example in smarts.plus using smirks reaction in python script and the first smiles in `/home/ymanasa/turbo/CovalentLibs/unsubstituted-acrylamides/fragments/smiles/unsub.frag.acrylamides.ism`
+		- looking at the grant, we can tell that the ligands from Martin have nitrile warheads and hence we can use the heterocyclic nitrile warhead scripts to add Silicon atoms for covalent interactions
+			- make sure they all have nitrile warheads on cdd
+		- can use smarts.plus to view reaction strings from scripts 
+	- make db2 files using tldr 
+- prep human target 
+- 
+	- filter to a subset that will be good, have one or two backups-- have three; check if all are identical or if they have propeptides/open or close/ high res vs low res
+	- check grant and relevant papers for HsCPL target structure
+## Things to do for the next week
+#### Research
+- [x] keep docking ENAMINE libraries
+	- need python scripts to add Si to work 
+	- matt needs to respond with licensing info 
+- [x] do pose analysis for docked enamine libraries 
+- prepare Martin's ligands for covalent docking 
+	- [x] comb cdd to make sure all are nitrile warheads of the same kind
+- prepare db2 files for Martin's ligands 
+	- need to prep with Si first
+- [x] select human target
+#### HW
+- [x] BIOINF 500 HW (Sun 10/14)
+- [x]  Really Read BIOINF 602 paper for Review  https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005595 (Fri 10/13)
+- [x] BIOINF 575 (Th 10/19)
+
+#### Meetings
+- [x] BIOINF 602 Review Session (10/13 F)
+- [x] Tools & Tech Seminar (10/12 T)
+- [ ] BISTRO (10/18 Th)
+- [x] Weekly Meeting with Matt (10/18 W)
+- [x] BIOINF 575 Project Meeting (T 10/17)
+# Oct 18, 2023
+
+## Things discussed
+- pose analysis
+	- take top 0.1%? as suggested in [[bender_2021]]
+		- clustering similar types of molecules and checking for the best one in each cluster 
+		- could come up with filtering rules to get rid of molecules of the same type 
+	- fastest way to get that:
+		- bash: sort the extract_all.txt last total energy column and then compute top 0.1%?
+- tldr vs OpenBabble (easier to just use tldr after using OpenEye) 
+	1. add silicon atoms
+	2. confirmation enumeration: ZINC uses OpenEye or RDKit 
+	3. charge distribution in a compound, desolvation energies using programs (in bender)
+- OpenEye Lisence
+	- can use RDkit instead for SMIRKS patterns 
+- other ENAMINE libraries (commericially avaialbel compounds): 
+	- can ask around if other labs already have prepped the other libraries 
+	- ENAMINE libraries on turbo might be too old (just use these for now)
+	- might use covalent libraries being used currently (in google scholar papers)
+- other libraries (warhead compounds) 
+	- can get a much larger library 
+	- ZINC: chemical search using warhead to get all the compounds of that type using the SMARTS pattern 
+	- https://sw.docking.org/search.html
+- HsCPL prep
+	- aligned 4 
+		- got structures from the curated list on TgCPL activity google sheet
+		- also wanted 1CJL bc it was the structure used in the activity assays from ChemBL 
+	- best resolution structure doesnt look right 
+		- was thinking of using this for docking once i figure out which residue ligands are docked to
+		- check what residues around the active site are different between toxo and human CPL 
+	- select the ligand -> show residues within 8 A 
+	- find the residues using protease pocket naming conventions (like P1,P2, etc) and find the residues that interact within the HsCPL pocket and TgCPL pocket 
+	- identify the residues that are interacting with key residues in TgCPL and HgCPL 
+		- can quantify to find if selective later 
+	- DOCK is not great at confirmation sampling of the receptor 
+		- can use Rosetta Docking to do different confirmations for the HsCPL 
+	- check if the water molecules same in every structure 
+		- using polar measurement 
+	- use measure wizard tool to measure angles and bonds 
+		- check covalent ligand angle bonds between all human cpl structures and the toxo hits 
+		- Different trials: could dock to all four human targets (to asses natural variation of DOCK between same targets-- to see the consistency of ligand ranking)
+	- can save scenes 
+		- scene -> append -> right click lower left corner to rename scene and save
+		- if you save session and reopen, the scenes will be saved with that session 
+#### HW
+- [ ] BIOSTAT 601 (10/19 Th)
+- [ ] BIOINF575: Start Github Repo + Attempt Project (??)
+- [ ] BIOINF 575 set up meeting time
+- [ ] BIOINF 575 (10/25 Th)
+- [ ] BIOSTAT 601 (10/25 Th)
+- [ ] BIOINF 602 Reading (10/24 W)
+- [ ] ML Rosetta JC (10/24 W)
+#### Research
+- [ ] prepare Martin's ligands for covalent docking 
+- [ ] prepare db2 files for Martin's ligands 
+- [ ] prep human target 
+- [ ] docking to 4 human cathepsins
+- [ ] continue pose analysis
+- [ ] might want to make slides with key milestones/steps
+#### Meetings 
+- [ ] Tools & Tech (10/19 Th) 
+- [ ] BISTRO (10/19 Th)
+- [ ] Weekly Meeting with Matt (10/25 W)
+- [ ] BISTRO (10/26 Th)
+- [ ] BISTRO Activity (10/26 Th)
+

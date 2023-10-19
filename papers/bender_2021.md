@@ -109,3 +109,49 @@
 	89-103 small-scale in stock screen to ensure a computationally expensive large-scale prospective screen
 	104-108 hit picking 
 	![[dock_protocol.png]]
+# Summary-- relevance to our project
+- Retrospective Control Calculations 
+	- 'in-stock’ compound set is used as an experimental control to guard against obvious sources of failures 
+	- the model parameters will be tweaked for each type of control covalent library 
+	- each tweaked model can then be used to dock each type of experimentally determined ligand actives (from Martin) 
+	- "type" == warhead type of the ligands (ex: unsub acrylamide)
+	- decoys of active and inactive compounds can be constructed and docked instead of using in stock compound sets (decoys created using DUDE-Z server and known active/inactive compounds for the given target)
+	- known activates (positive controls): found in scientific literature ChEMBL/ZINC/available in-house
+
+- Prospective Docking screen
+	- after tweaking the model: large libraries can be screened against target 
+	- ZINC2.0 DB has readily available compounds for testing
+		- includes 3D conformer libraries of commercially available compounds 
+		- most blond to make-on-demand libraries like Enamine (like unsubstituted_acrylamides_frag, beta_sub_acrylate_esters, etc)
+	- will give a list of molecules rank-ordered by docking score 
+	- best molecules can be used to experimentally test 
+
+- Hit Picking 
+	- visually filtering molecules
+	- molecules with strained conformations are discarded
+	- this paper has a clean hit picking criteria 
+
+- Experiments to test docking hits
+	- binding or functional assays
+	- dock and test molecules with LogP <= 3.5 
+	- concentration response curves
+	- determining an experimental protein structure in complex with docking hit 
+	- before hit optimization, important for make-on-demand libraries (from prospective docking screen) to confirm identity of hit compound
+
+- Selecting analogs for hit to lead optimization 
+	- newly obtained scaffolds can be used to explore structure-activity relationships and lead optimization 
+	- subtle changes to starting compound to test particular interactions 
+
+# How does DOCK3.7 work?
+- ligands are placed in target pocket by mapping ligand atoms onto predefined hot spots/matching spheres 
+- matching spheres
+	- generated from coordinated of heady atoms form an input bound ligand structure 
+	- and/or coordinates based on negative image of the binding site generated from SphGen
+	- ligand rigid frags (ex: rings) are mapped onto matching spheres using bipartite graph algorithm 
+	- db2 files have pre-calculated 3D conformer libraries for ligand conformation/orientation sampling in the binding pocket 
+	- ligand poses are evaluated using physics based scoring function 
+	- contributions of target protein pocket are mapped onto pre-generated scoring grids 
+		- ChemGrid converts the VDW surface of binding pocket into a scoring grid
+		- Electrostatic potentials within binding pocket are estimated by solving the Poisson-Boltzmann eq using QNIFFT 
+		- Solvmap generates context-dependent desolvation energy scoring grinds 
+		- Atomic desolvation energies are calculated during ligand building using AMSOL 

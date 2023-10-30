@@ -1,3 +1,58 @@
+# Attempt 1
+happening in: `/home/ymanasa/turbo/projects/TgCPL/docking/docking-campaigns/docking_campaigns_local/`
+- use method to dock a library of commercially available ligand types assessed in previous step
+- make library using guide to pharmacology.com, chemb, pubchem, binding db
+- one zinc id might correspond to different chmbl molecules. toxoplasma cpl and human cpL
+
+- Docking being performed on greatlakes in turbo: `/home/ymanasa/turbo/projects/TgCPL/docking/docking-campaigns/docking_campaigns_local`
+	- it is connected to a github repo (docking_campaigns)
+
+- *Have to run source setup_environment.sh every time you start a new session*
+- start docking process by running `$DOCK_TEMPLATE/scripts/wizard.sh` in home docking dir
+- Have to add pdb code to 1_make_structure.sh in `/home/ymanasa/turbo/projects/TgCPL/docking-campaigns/docking_campaigns_local/structures/tgcpl_20230901` to make receptor structure 
+- not adding `LIGAND_CHAIN` and `LIGAND_RESID` because this pdb does not have a ligand bound
+- 3F75 however, does have information about where a ligand might be bound (indicated by HETATM labels in pdb and in xtal-lig.pdb output)
+
+***!! the ligand info is used for sampling but since we dont have a reference ligand for TgCPL, sampling might be slightly inaccurate !!***
+![[1_make_structure_edits.png]]
+
+- To find out which covalent_residue_number to use in the `/home/ymanasa/turbo/projects/TgCPL/docking/docking-campaigns/docking_campaigns_local/prepared_structures/tgcpl_20230830/1_prepare_structure.sh `file:
+	- Open the target ligand (Toxoplasma CPL ***3F75***) in pymol and open a reference protein that is similar enough to the target that has a ligand in the crystal structure (CPK ***301G***-- got this from the excel sheet called TgCPL activities).
+	- Estimate where the ligand in 301G is in contact with residue in 3F75 to determine COVALENT_RESIDUE_NUMBER
+
+![[pymol_ligand_contact_view.png]]
+
+- Had to add line to detect with python because when the slurm script ran, the right python in the environment was not being used
+![[1_prepare_structure_edits 1.png]]
+
+- make sure INDOCK file in `/home/ymanasa/turbo/projects/TgCPL/docking-campaigns/docking_campaigns_local/prepared_structures/tgcpl_20230901/dockfiles` exists and looks ok
+- ![[dockfiles_INDOCK_File.png]]
+- also check `docking/trim.electrostatics.phi` file. it should look like: 
+- ![[trim.electrostatics.phi_start.png]]
+- middle of the same file: 
+![[trim.electrostatics.phi_middle.png]]
+- add these lines to `2_finalize_structure.sh` before running it: 
+![[2_finalize_structure_edits.png]]
+
+- go back to home docking dir (`/home/ymanasa/turbo/projects/TgCPL/docking/docking-campaigns/docking_campaigns_local`) and run `$DOCK_TEMPLATE/scripts/wizard.sh`
+
+
+# Debugging 09/03-09/06
+For some reason docking for neither a previous example or covalent docking to TgCPL is working after the docking_campaigns directory was moved from /home/ymanasa. 
+
+Currently trying to rerun example (androgen) done with Marissa in /home/ymanasa
+![[debug_androgen_ex_run.png]]
+It is working just fine. Note the export path information. That is probably not the same when run from turbo/. Need to compare. This test ran successfully. 
+
+- Ran two different tests with TgCPL in /home/ymanasa. tgcpl_20230901 (NOT covalent docking) and tgcpl_cov_20230905 (COVALENT docking). 
+	- docking runs happening for: tgcpl_20230901,zinc_instock,tgcpl_test_new,20230905
+	- preparing structures for tgcpl_cov_20230905
+		- running docking tgcpl_cov_20230905,zinc_instock,tgcpl_cov_test,20230906
+		- ignored the following errors while preparing structure: 
+		![[cov_docking_prep_errors.png]]
+		- export path info: ![[export_path_home_cov_tgcpl.png]]
+- Things are at least running but memory issues didnt let the jobs finish.
+- Path issues must be resolved if you want to run from turbo/
 # Docking to TgCPL: unsubstituted-acrylamides DB 
 - using database: `/home/ymanasa/turbo/CovalentLibs/unsubstituted-acrylamides/fragments/`
 - made .sdi file of unsubstituted-acrylamides in: `/home/ymanasa/turbo/CovalentLibs/unsubstituted-acrylamides/fragments/gz_files/unsub-acrylamide-frag.sdi`
@@ -62,9 +117,8 @@
     ` ${COVALENT_RESIDUE_ATOMS}`
   - also to run lines after running `dock_blastermaster_standard.sh` in `1_prepare_structure.sh`, I made everything one single line using &&: `source ${DOCK_TEMPLATE}/scripts/dock_blastermaster_standard.sh && mv working working_standard && cp working_standard/rec.crg.pdb rec.pdb && mkdir working`
 	- actually ended up diving all commands into 4 different shell scripts 
-		- try running all these scripts sequentially: source 1_prepare_structure.sh; source 2_prepare_structure.sh; source 3_prepare_structure.sh; source 4_prepare_structure.sh; source 2_finalize
-		- this didnt work
-		- keeping all files separate, run one after the other manually 1-4 prepare_structure.sh scripts 
+		- try running all these scripts sequentially: source 1_prepare_structure.sh; 2_prepare_structure.sh; 3_prepare_structure.sh; 4_prepare_structure.sh; 2_finalize
+	
 # Docking run: 
 - docking upon `/prepared_structures/tgcpl_cov_20230911`
 - `tgcpl_cov_20230911,unsubstituted_acrylamides_frag,,20230914`
@@ -134,7 +188,6 @@ Testing in: `/nfs/turbo/umms-maom/nSMase2/fragment_screen/docking_runs/manasa_te
 - the total energies can be found in the /docking_runs/receptor_name_DBtype/results/1/OUTDOCK.0 file 
 - the OUTDOCK.0 file shows the ligands docked along with all the poses of each and the energies
 - each db2.gz file has different number of ligands but 10 poses each unless the energies are too high (above the 100 limit set in INDOCK)
-
 # Oct 6, 2023
 ## Premature job termination
 might be the cause of the errors seen when analyzing the OUTDOCK.0 file
@@ -167,80 +220,3 @@ need to change scripts in `${DOCK_TEMPLATE}=/home/ymanasa/opt/dock_campaign_temp
 ## Submitting pull request for changed scripts to reflect how things should be run
 - since previous pull request was not resolved and closed, any new commits made on prepare_structure_fix branch is automatically added to previous pull request
 - the pull request can be updated manually on github
-
-# Oct 10, 2023
-## unsub_acrylamides run
-ran successfully, took around 12 hours and less than 1GB of memory 
-- pose generation
-	- run: `ls -d results/* > dirlist` to make a list of results/# directories
-	- cleanup: remove anything other than numbered directories 
-	- run: `python $DOCKBASE/analysis/extract_all_blazing_fast.py dirlist extract_all.txt 100`
-	- check:` extract_all.sort.uniq.txt` for unique docked poses sorted by total energies (lowest to highest, lowest is best)
-	- run: `python $DOCKBASE/analysis/getposes_blazing_faster_py3.py '' extract_all.sort.uniq.txt 1000000 poses.mol2 test.mol2.gz.0 > poses_out.txt`
-	- chimera: load poses.mol2 file into chimera 
-	
-can be found here: `/home/ymanasa/turbo/projects/TgCPL/docking-campaigns/docking_campaigns_local/docking_runs/tgcpl_cov_20230911,unsubstituted_acrylamides_frag,,20231006`
-![[unsub_acryl_weird1.png]]
-
-![[unsub_acrly_weird2.png]]
-
-![[unsub_acryl_weird3.png]]
-
-![[unsub_acrly_weird4.png]]
-
-
-Stopping here 10/17: ![[last_pose_10_17_23.png]]
-## other ENAMINE libraries
-`/home/ymanasa/turbo/CovalentLibs/`
-docking/docked the following:
-- [x] alpha-sub-acrylate-esters
-- [x] ketone-based-enones
-- [x] unsub_acrylamides
-- [x] beta_sub_acrylate_esters_frags
-- [x] aldehyde-based-cyanoacrylamides
-- [x] heterocyclic-nitriles
-- [x] alkyl-halides
-- [ ] di-amine-linkers
-- [ ] fluorosulphones
-- [ ] amines
-- [ ] cyanamides
-- [ ] vinyl-sulfone
-- [ ] fmk
-## beta_sub_acrylate_esters_frags
-- [x] docking finished
-- [x] poses.mol2 made
-## alpha-sub-acrylate-esters
-`/home/ymanasa/turbo/CovalentLibs/alpha-sub-acrylate-esters/fragments/gz_files`
-- ls -d /nfs/turbo/umms-maom/CovalentLibs/alpha-sub-acrylate-esters/fragments/gz_files/*.db2.gz > database.sdi 
-- moved to `/nfs/turbo/umms-maom/projects/TgCPL/docking-campaigns/docking_campaigns_local/databases/alpha_sub_acrylate_esters_frag`
-- [x] docking finished
-- [x] poses.mol2 made
-## ketone-based-enones
-`/nfs/turbo/umms-maom/CovalentLibs/ketone-based-enones/fragments/gz_files`
-- ls -d /nfs/turbo/umms-maom/CovalentLibs/ketone-based-enones/fragments/gz_files/*.db2.gz > database.sdi 
-- moved to `/nfs/turbo/umms-maom/projects/TgCPL/docking-campaigns/docking_campaigns_local/databases/ketone_based_enones_frag`
-- [x] docking finished
-- [x] poses.mol2 made
-## heterocyclic-nitriles
-`/nfs/turbo/umms-maom/CovalentLibs/heterocyclic-nitriles/fragments/gz_files/`
-- moved `database.sdi` to `/nfs/turbo/umms-maom/projects/TgCPL/docking-campaigns/docking_campaigns_local/databases/heterocyclic_nitriles_frag/`
-- [x] docking finished
-- [x] poses.mol2 made
-## aldehyde-based-cyanoacrylamides
-`/nfs/turbo/umms-maom/CovalentLibs/aldehyde-based-cyanoacrylamides/fragments/gz_files/
-- moved `database.sdi` to `/nfs/turbo/umms-maom/projects/TgCPL/docking-campaigns/docking_campaigns_local/databases/aldehyde_based_cyanoacrylamides_frag`
-- [x] docking finished
-- [x] poses.mol2 made
-## alkyl-halides
-`/nfs/turbo/umms-maom/CovalentLibs/alykl-halides/fragments/gz_files/`
-- moved `database.sdi` to `/nfs/turbo/umms-maom/projects/TgCPL/docking-campaigns/docking_campaigns_local/databases/alkyl_halides_frag`
-- [x] docking finished
-- [x] poses.mol2 made
-
-## di-amine-linkers
-## fluorosulphones
-## amines
-## cyanamides
-## vinyl-sulfone
-## fmk
-

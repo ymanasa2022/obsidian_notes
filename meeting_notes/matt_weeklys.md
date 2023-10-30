@@ -172,7 +172,7 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 	- get list of compounds from pChEMBL for a given target
 	- for a given assay, get list of compounds 
 	- take out ones with low pChEMBL Values and ones with comments in data validity. repeat for human cpl
-- Test running [Covalent](covalent_docking_test.md) docking on greatlakes with existing database 
+- Test running [Covalent](debugging_docking_tgcpl.md) docking on greatlakes with existing database 
 ## To do for the week
 - [x] curate small compounds that dock to tgcpl
 	- R05 Violations (drug bioaccessibility rules)? if more than 0, take out?
@@ -447,7 +447,7 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 		- pka calculations might be needed to confirm these protonation states 
 			- either done by hand or use software (ask Matt)
 	- need to do for all ENAMINE libraries
-- pull request assessment ([[covalent_TgCPL_ENAMINE_libs]]) 
+- pull request assessment ([[docking_enamine_tgcpl]]) 
 	- resolve git issues for docking_campaings repo 
 	- slurm issues resolved 
 - preparing ligands for covalent docking 
@@ -483,7 +483,7 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 #### Meetings
 - [x] BIOINF 602 Review Session (10/13 F)
 - [x] Tools & Tech Seminar (10/12 T)
-- [ ] BISTRO (10/18 Th)
+- [x] BISTRO (10/18 Th)
 - [x] Weekly Meeting with Matt (10/18 W)
 - [x] BIOINF 575 Project Meeting (T 10/17)
 # Oct 18, 2023
@@ -495,20 +495,22 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 		- could come up with filtering rules to get rid of molecules of the same type 
 	- fastest way to get that:
 		- bash: sort the extract_all.txt last total energy column and then compute top 0.1%?
+	- for now go through all poses
 - tldr vs OpenBabble (easier to just use tldr after using OpenEye) 
+	- OpenBabble steps: 
 	1. add silicon atoms
 	2. confirmation enumeration: ZINC uses OpenEye or RDKit 
 	3. charge distribution in a compound, desolvation energies using programs (in bender)
 - OpenEye Lisence
-	- can use RDkit instead for SMIRKS patterns 
-- other ENAMINE libraries (commericially avaialbel compounds): 
+	- Matt will get it (got it on friday: `~/turbo/opt/OpenEye/oe_license.txt`)
+- other ENAMINE libraries (commercially available compounds): 
 	- can ask around if other labs already have prepped the other libraries 
 	- ENAMINE libraries on turbo might be too old (just use these for now)
 	- might use covalent libraries being used currently (in google scholar papers)
-- other libraries (warhead compounds) 
-	- can get a much larger library 
-	- ZINC: chemical search using warhead to get all the compounds of that type using the SMARTS pattern 
-	- https://sw.docking.org/search.html
+	- other libraries (warhead compounds) 
+		- can get a much larger library 
+		- ZINC: chemical search using warhead to get all the compounds of that type using the SMARTS pattern 
+		- https://sw.docking.org/search.html
 - HsCPL prep
 	- aligned 4 
 		- got structures from the curated list on TgCPL activity google sheet
@@ -530,25 +532,81 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 	- can save scenes 
 		- scene -> append -> right click lower left corner to rename scene and save
 		- if you save session and reopen, the scenes will be saved with that session 
+## Things to do 
 #### HW
-- [ ] BIOSTAT 601 (10/19 Th)
-- [ ] BIOINF575: Start Github Repo + Attempt Project (??)
-- [ ] BIOINF 575 set up meeting time
-- [ ] BIOINF 575 (10/25 Th)
-- [ ] BIOSTAT 601 (10/25 Th)
-- [ ] BIOINF 602 Reading (10/24 W)
-- [ ] ML Rosetta JC (10/24 W)
+- [x] BIOSTAT 601 (10/19 Th)
+- [x] BIOINF575: Start Github Repo + Attempt Project (??)
+- [x] BIOINF 575 set up meeting time
+- [x] BIOINF 575 (finish Q1 all parts)
+- [x] BIOSTAT 601 (10/25 Th)
+- [x] BIOINF 602 Reading (10/24 W)
+- [x] ML Rosetta JC (10/24 W)
 #### Research
-- [ ] prepare Martin's ligands for covalent docking 
-- [ ] prepare db2 files for Martin's ligands 
-- [ ] prep human target 
-- [ ] docking to 4 human cathepsins
-- [ ] continue pose analysis
-- [ ] might want to make slides with key milestones/steps
+- [x] prepare Martin's ligands for covalent docking 
+- [x] prepare db2 files for Martin's ligands 
+- [x] prep human target 
+- [x] docking enamine libs to human cathepsin
+- [x] continue pose analysis
 #### Meetings 
-- [ ] Tools & Tech (10/19 Th) 
-- [ ] BISTRO (10/19 Th)
-- [ ] Weekly Meeting with Matt (10/25 W)
-- [ ] BISTRO (10/26 Th)
-- [ ] BISTRO Activity (10/26 Th)
+- [x] Weekly Meeting with Matt (10/25 W)
+- [x] Rosetta JC (10/25 W)
+- [x] BISTRO (Th)
+- [x] Tools & Tech (Th) 
+
+# Oct 25, 2023
+## Things discussed
+- ligand prep martin: 
+	- used smirks for conversion of CN-(C)aromatic-(N)aromatic to add Si 
+	- used [tldr](https://tldr.docking.org/) to create db2 files
+	- next steps: dock these to tgcpl
+		- confused about file structure setup 
+		- `/home/ymanasa/turbo/CovalentLibs/martin_cdd`
+		- just need to get path to all the db2.gz files 
+- hscpl prep
+	- running into errors with blastermaster (used DOCK3.8 for this part)
+		- just match the procedure for tgcpl and hscpl 
+	- docking enamine libraries to hscpl (5 at a time; using DOCK3.7)
+	- going to dock to all 4 human targets
+	- next step: dock martin's compounds to hscpl 
+- pose analysis:
+	- still doing unsub acrylamides 
+	- can do together after first pass through hits (aim for 100) and after hscpl hits filtering too (want to only look at the ones in the human that were good in the toxo; how many hits are we getting, energy distributions, certain types of covalent ligands dock better/worse than others)
+	- Nov Week of the 27th (send when2meet; all lab members)
+- data curation 
+	- bring martin cdd smiles into TgCPL activities excel 
+	- figure out which chembl ligands are covalent
+		- use chembl doc ID -> paper-> covalent or not?
+	- bring local excel chembl ligands into tgcpl activities excel 
+	- next step: prep the covalent ligands from chembl to dock to hscpl and tgcpl-> validated experimentally so they should dock well (retrospec)
+## Things to do 
+#### HW
+- [x] BIOINF 602 Reading (11/1 W)
+- [x] BIOINF 575 HW (finish Q2 all parts; 11/2 Th)
+- [ ] BIOINF 602 Review Session Paper (11/3 F)
+- [ ] BIOSTAT 601 HW (11/2 Th)
+- [ ] BIOSTAT Practice Qs
+- [x] BIOSTAT Midterm 1 review
+- [ ] BIOINF Project
+#### Research 
+- [x] prep 3 other human cathepsins
+- [x] dock all other enamine libraries to hscpl 5maj
+- [x] start docking to other 3 hscpl 
+	- [ ] debug 
+- [x] dock martin ligands to tgcpl 
+	- [ ] debugging w. Miguel
+- [x] dock martin ligands to hscpl
+	- [ ] debugging w. Miguel
+- [ ] continue pose analysis
+- [ ] filter chembl ligands for covalent only 
+- [ ] update TgCPL activities excel 
+	- [ ] add martin cdd smiles (only gave us triazine series smiles)
+	- [ ] add chembl ligands after filtering for covalent
+#### Meetings
+- [x] BIOINF Project Meeting (10/29 Sun)
+- [x] Med Chem Seminar (10/30 M)
+- [ ] Weekly Meeting with Matt (11/1 Wed)
+- [ ] Tools & Tech (11/2 Th)
+- [ ] Molecular Modeling (11/3 F)
+- [ ] PIBS 503 Animal Use and Care (11/3)
+
 

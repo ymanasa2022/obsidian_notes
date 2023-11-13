@@ -30,17 +30,8 @@ ran successfully, took around 12 hours and less than 1GB of memory
 	- chimera: load poses.mol2 file into chimera 
 	
 can be found here: `/home/ymanasa/turbo/projects/TgCPL/docking-campaigns/docking_campaigns_local/docking_runs/tgcpl_cov_20230911,unsubstituted_acrylamides_frag,,20231006`
-![[unsub_acryl_weird1.png]]
 
-![[unsub_acrly_weird2.png]]
-
-
-![[unsub_acrly_weird4.png]]
-
-
-Stopping here 10/20: 
-![[Pasted image 20231020123626.png]]
-
+![[tgcpl_unsub_acryl_N_angle_weird.png]]
 ## beta_sub_acrylate_esters_frags
 - [x] docking finished
 - [x] poses.mol2 made

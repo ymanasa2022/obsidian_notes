@@ -63,3 +63,4 @@ can check job status
 	- Miguel wrote gen_sdf.py and made multi-molecule sdf file using my SMILES (after Si added)
 	- the sdf file is then converted into mol2 file using rdkit or open babel
 - this mol2 file can be input into tldr build3d_mol2 (`manasa_rdkit.mol2` was input file)
+	- building db2 gz right now 

@@ -8,48 +8,47 @@ wizard -> 2) Make Structure
 wizard -> 3) Prepare Structure
 - COVALENT_RESIDUE_NUMBER=26
 `/nfs/turbo/umms-maom/projects/TgCPL/docking-campaigns/docking_campaigns_local/prepared_structures/hscpl_3OF9_20231026`
-
 # Step 3: Docking Run
 wizard ->  4) Docking run 
 ## aldehyde_based_cyanoacrylamides
-
+docking right now 
 - [ ] docking finished
 - [ ] poses.mol2 made
 - [ ] filter hits (first pass)
 - [ ] filter hits (final pass)
 ## alkyl_halides
-
+docking right now 
 - [ ] docking finished
 - [ ] poses.mol2 made
 - [ ] filter hits (first pass)
 - [ ] filter hits (final pass)
 ## alpha_sub_acrylate_esters
-
+docking right now
 - [ ] docking finished
 - [ ] poses.mol2 made
 - [ ] filter hits (first pass)
 - [ ] filter hits (final pass)
 ## beta_sub_acrylate_esters
-
+docking right now 
 - [ ] docking finished
 - [ ] poses.mol2 made
 - [ ] filter hits (first pass)
 - [ ] filter hits (final pass)
 ## heterocyclic_nitriles
-
+docking right now
 - [ ] docking finished
 - [ ] poses.mol2 made
 - [ ] filter hits (first pass)
 - [ ] filter hits (final pass)
 ## ketone_based_enones_frag
-
+docking right now
 - [ ] docking finished
 - [ ] poses.mol2 made
 - [ ] filter hits (first pass)
 - [ ] filter hits (final pass)
 
 ## unsubstitute_acrylamides_frag
-
+docking right now 
 - [ ] docking finished
 - [ ] poses.mol2 made
 - [ ] filter hits (first pass)

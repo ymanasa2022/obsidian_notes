@@ -23,55 +23,55 @@ COVALENT_RESIDUE_NUMBER = 25
 # Step 3: Docking Run
 wizard -> 4) Docking Run
 - change back $DOCKBASE to DOCK3.7 in setup_dock_environment_new.sh 
+- MAKE SURE INDOCK FILE HAS RIGHT ARGS (sed will not throw an error if it cant find a given pattern)
+- squeue | grep -e "ymanasa" -e "rundock"
 ## aldehyde_based_cyanoacrylamides
 - `hscpl_5MAJ_20231023,aldehyde_based_cyanoacrylamides_frag,,20231025/`
-
-i think slurm job needs more time
-
-- [ ] docking finished
-- [ ] poses.mol2 made
+63424149
+- [x] docking finished
+- [x] poses.mol2 made
 - [ ] filter hits (first pass)
 - [ ] filter hits (final pass)
 ## alkyl_halides
 - `hscpl_5MAJ_20231023,alkyl_halides_frag,,20231025/`
-i think slurm job needs more time
-- [ ] docking finished
-- [ ] poses.mol2 made
+63424840
+- [x] docking finished
+- [x] poses.mol2 made
 - [ ] filter hits (first pass)
 - [ ] filter hits (final pass)
 ## alpha_sub_acrylate_esters
 - `hscpl_5MAJ_20231023,alpha_sub_acrylate_esters_frag,,20231025/`
-- docking right now
-- [ ] docking finished
-- [ ] poses.mol2 made
+63425535
+- [x] docking finished
+- [x] poses.mol2 made
 - [ ] filter hits (first pass)
 - [ ] filter hits (final pass)
 ## beta_sub_acrylate_esters
 - `hscpl_5MAJ_20231023,beta_sub_acrylate_esters_frag,,20231025/`
-- docking right now
-- [ ] docking finished
-- [ ] poses.mol2 made
+63425556
+- [x] docking finished
+- [x] poses.mol2 made
 - [ ] filter hits (first pass)
 - [ ] filter hits (final pass)
 ## heterocyclic_nitriles
 - `hscpl_5MAJ_20231023,heterocyclic_nitriles_frag,,20231025/`
-- docking right now
-- [ ] docking finished
-- [ ] poses.mol2 made
+63425654
+- [x] docking finished
+- [x] poses.mol2 made
 - [ ] filter hits (first pass)
 - [ ] filter hits (final pass)
 ## ketone_based_enones_frag
 - `hscpl_5MAJ_20231023,ketone_based_enones_frag,,20231026`
-- docking right now
-- [ ] docking finished
-- [ ] poses.mol2 made
+63426153
+- [x] docking finished
+- [x] poses.mol2 made
 - [ ] filter hits (first pass)
 - [ ] filter hits (final pass)
 
 ## unsubstitute_acrylamides_frag
 - `hscpl_5MAJ_20231023,unsubstituted_acrylamides_frag,,20231026`
-- docking right now
-- [ ] docking finished
-- [ ] poses.mol2 made
+63426335
+- [x] docking finished
+- [x] poses.mol2 made
 - [ ] filter hits (first pass)
 - [ ] filter hits (final pass)

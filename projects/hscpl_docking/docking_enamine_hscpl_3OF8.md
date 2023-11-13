@@ -11,50 +11,44 @@ wizard -> 3) Prepare Structure
 # Step 3: Docking Run
 wizard ->  4) Docking run 
 ## aldehyde_based_cyanoacrylamides
-- 
+docking running
 - [ ] docking finished
 - [ ] poses.mol2 made
 - [ ] filter hits (first pass)
 - [ ] filter hits (final pass)
 ## alkyl_halides
-
-
+docking running
 - [ ] docking finished
 - [ ] poses.mol2 made
 - [ ] filter hits (first pass)
 - [ ] filter hits (final pass)
 ## alpha_sub_acrylate_esters
-- 
-
+docking running
 - [ ] docking finished
 - [ ] poses.mol2 made
 - [ ] filter hits (first pass)
 - [ ] filter hits (final pass)
 ## beta_sub_acrylate_esters
-- 
-
+docking running
 - [ ] docking finished
 - [ ] poses.mol2 made
 - [ ] filter hits (first pass)
 - [ ] filter hits (final pass)
 ## heterocyclic_nitriles
-- 
-
+docking running
 - [ ] docking finished
 - [ ] poses.mol2 made
 - [ ] filter hits (first pass)
 - [ ] filter hits (final pass)
 ## ketone_based_enones_frag
-- 
-
+docking running
 - [ ] docking finished
 - [ ] poses.mol2 made
 - [ ] filter hits (first pass)
 - [ ] filter hits (final pass)
 
 ## unsubstitute_acrylamides_frag
-- 
-
+docking running
 - [ ] docking finished
 - [ ] poses.mol2 made
 - [ ] filter hits (first pass)

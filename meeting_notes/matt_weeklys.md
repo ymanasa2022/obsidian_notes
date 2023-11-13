@@ -582,31 +582,94 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 #### HW
 - [x] BIOINF 602 Reading (11/1 W)
 - [x] BIOINF 575 HW (finish Q2 all parts; 11/2 Th)
-- [ ] BIOINF 602 Review Session Paper (11/3 F)
-- [ ] BIOSTAT 601 HW (11/2 Th)
-- [ ] BIOSTAT Practice Qs
+- [x] BIOINF 602 Review Session Paper (11/3 F)
+- [x] BIOSTAT 601 HW (11/2 Th)
+- [x] BIOSTAT Practice Qs
 - [x] BIOSTAT Midterm 1 review
-- [ ] BIOINF Project
+- [x] BIOINF Project
 #### Research 
 - [x] prep 3 other human cathepsins
 - [x] dock all other enamine libraries to hscpl 5maj
 - [x] start docking to other 3 hscpl 
-	- [ ] debug 
-- [x] dock martin ligands to tgcpl 
-	- [ ] debugging w. Miguel
-- [x] dock martin ligands to hscpl
-	- [ ] debugging w. Miguel
-- [ ] continue pose analysis
-- [ ] filter chembl ligands for covalent only 
-- [ ] update TgCPL activities excel 
-	- [ ] add martin cdd smiles (only gave us triazine series smiles)
-	- [ ] add chembl ligands after filtering for covalent
+	- [x] debug
+- [x] continue pose analysis
+- [x] update TgCPL activities excel 
+	- [x] add martin cdd smiles (only gave us triazine series smiles)
 #### Meetings
 - [x] BIOINF Project Meeting (10/29 Sun)
 - [x] Med Chem Seminar (10/30 M)
-- [ ] Weekly Meeting with Matt (11/1 Wed)
-- [ ] Tools & Tech (11/2 Th)
-- [ ] Molecular Modeling (11/3 F)
-- [ ] PIBS 503 Animal Use and Care (11/3)
+- [x] Weekly Meeting with Matt (11/1 Wed)
+- [x] Tools & Tech (11/2 Th)
+- [x] Molecular Modeling (11/3 F)
+- [x] PIBS 503 Animal Use and Care (11/3)
 
+# Nov 8, 2023
+## Things discussed 
+- prepped the 3 other human cathepsins 
+	- REGEX to match and replace  use a regular expression builder to test 
+- started docking to hscpl 
+	- make sure all the indock stuff are the same for all trials 
+	- scripts to start where a job stops?
+- tldr build3d_38 ligands didnt work with dock3.7 
+	- tried using rdkit/open babel 
+	- Miguel had to produce mol2 files for me
+		- with and wihtout 3d coords
+	- tldr build3d_mol2 was used but that failed 
+		- email tldr server people with input 
+		- start with something that's working to see what my input differences are 
+- added martin smiles to excel
+	- used latest naming  
+	- continue adding the other warhead ligands -- get smiles 
+- test noncovalent docking of enamine covalent libraries 
+	- DOCK3.8 
+	- want to see if its reading db2 files correctly
+	- try rebuilding small enamine library with tldr db2 and test with dock3.8 
+	- the enamine libs right now were made for dock3.7 with older tldr software 
+## Things to do 
+#### HW 
+- [x] BIOSTAT Practice  
+- [x] BIOSTAT HW 9 
+- [x] BIOSTAT Exam prep
+- [x] BIOSTAT Exam
+- [x] BIOINF 602 JC Reading
+- [x] decide what advanced bioinf class to take (580 signal processing)
+#### Research
+- [x] figure out appropriate slurm flags (the slurm flags i have are good)
+- [x] docking to other 3 hscpls 
+- [x] ask miguel for a working mol2 
+	- dock martin ligands to  tgcpl
+	- dock martin ligands to hscpl
+#### Meetings
+- [x] Meeting w Matt (M)
+- [x] Weekly Meeting w Matt (W)
 
+# Nov 15, 2023
+## Things discussed
+- rebuilding a subset of enamine ketone_based_enones using ***build3d_dock38***
+	- the enamine libraries might have older formats of the db2 files that are not compatible with dock3.8
+- also rebuilt same subset using mol2 file (from Miguel) build3d_mol2
+- test non-covalent docking with partial ketone covalent library dock3.8 
+- test covalent docking with partial ketone covalent library dock3.8 
+
+## To do 
+#### HW
+- [ ] BIOINF HW 7 
+- [x] BIOINF 602 Reading
+- [ ] BIOINF 602 JC Reading
+- [ ] BIOINF Project
+#### Research
+- [ ] test non-covalent docking with ketone covalent library dock3.8 
+- [ ] test covalent docking with ketone covalent librariy dock3.8 
+- [x] dock all enamine libs to 3 other hscpl (used dock37)
+- [ ] filter chembl ligands for covalent only 
+- [ ] add chembl ligands after filtering for covalent to TgCPL Activities excel 
+- [ ] add other warhead ligands-- get SMILES etc
+- [x] continue pose analysis 
+- [ ] rebuild db2 gz files for martin ligands using tldr
+#### Meetings
+ - [ ] Matt Weekly (W)
+ - [ ] Tools & Tech (Th)
+ - [ ] BISTRO (Th)
+ - [ ] MORE (Mentor Mentee Workshop F 11/17)
+ - [ ] BGSA Friendsgiving (F)
+ - [ ] PIBS 503 (F)

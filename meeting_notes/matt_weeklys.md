@@ -647,25 +647,22 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 ## Things discussed
 - rebuilding a subset of enamine ketone_based_enones using ***build3d_dock38***
 	- the enamine libraries might have older formats of the db2 files that are not compatible with dock3.8
-- also rebuilt same subset using mol2 file (from Miguel) build3d_mol2
+- also rebuilt same subset using mol2 file (from Miguel) ***build3d_mol2***
 - test non-covalent docking with partial ketone covalent library dock3.8 
 - test covalent docking with partial ketone covalent library dock3.8 
-
+- MORE Mentor Mentee workshop 
 ## To do 
 #### HW
-- [ ] BIOINF HW 7 
+- [x] BIOINF HW 7 
 - [x] BIOINF 602 Reading
-- [ ] BIOINF 602 JC Reading
+- [ ] BIOINF 602 Review Reading
 - [ ] BIOINF Project
 #### Research
 - [ ] test non-covalent docking with ketone covalent library dock3.8 
 - [ ] test covalent docking with ketone covalent librariy dock3.8 
 - [x] dock all enamine libs to 3 other hscpl (used dock37)
-- [ ] filter chembl ligands for covalent only 
-- [ ] add chembl ligands after filtering for covalent to TgCPL Activities excel 
-- [ ] add other warhead ligands-- get SMILES etc
+- [x] add other warhead ligands-- get SMILES 
 - [x] continue pose analysis 
-- [ ] rebuild db2 gz files for martin ligands using tldr
 #### Meetings
  - [ ] Matt Weekly (W)
  - [ ] Tools & Tech (Th)
@@ -673,3 +670,19 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
  - [ ] MORE (Mentor Mentee Workshop F 11/17)
  - [ ] BGSA Friendsgiving (F)
  - [ ] PIBS 503 (F)
+# Nov 22, 2023
+## Things discussed
+
+
+## To do 
+#### HW 
+- [ ] BIOINF HW8 (Th 11/30)
+- [ ] BIOSTAT HW10 (Th)
+- [ ] BIOINF Project (Sun 11/26)
+- [ ] BIOINF recording
+	- [ ] BIOINF 500 HW
+#### Research
+- [ ] continue pose analysis
+- [ ] filter chembl ligands for covalent only 
+- [ ] add chembl ligands after filtering for covalent to TgCPL Activities excel 
+- [ ] rebuild db2 gz files for martin ligands using tldr

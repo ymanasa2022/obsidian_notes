@@ -647,42 +647,63 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 ## Things discussed
 - rebuilding a subset of enamine ketone_based_enones using ***build3d_dock38***
 	- the enamine libraries might have older formats of the db2 files that are not compatible with dock3.8
-- also rebuilt same subset using mol2 file (from Miguel) ***build3d_mol2***
-- test non-covalent docking with partial ketone covalent library dock3.8 
-- test covalent docking with partial ketone covalent library dock3.8 
+	- also rebuilt same subset using mol2 file (from Miguel) ***build3d_mol2***
+	- testing non-covalent docking with partial ketone covalent library dock3.8 
+		- had to rerun blaster master (miguel suggested after looking at some fortran error)
+	- testing covalent docking with partial ketone covalent library dock3.8 
+	- does the db2 files have multiple ligands? 
+		- i only see a few mol2 output files 
+-- try with pre Si atom library with noncov docking dock38
+- got SMILES for all other warheads in TgCPL Activities
+	- can fetch zinc ids using r wrapper (Matt wrote-- ZIRConium, zinc-substances.R search_for_substances function or resolve substances--can put in a list of identifiers)
+	- small world search using structure (similarity search)
+- done docking to all other cathepsins 
 - MORE Mentor Mentee workshop 
 ## To do 
 #### HW
 - [x] BIOINF HW 7 
 - [x] BIOINF 602 Reading
-- [ ] BIOINF 602 Review Reading
-- [ ] BIOINF Project
+- [x] BIOINF 602 Review Reading
+- [x] BIOINF Project
 #### Research
-- [ ] test non-covalent docking with ketone covalent library dock3.8 
-- [ ] test covalent docking with ketone covalent librariy dock3.8 
+- [x] test non-covalent docking with ketone covalent library dock3.8 
+	- [x] docking to tgcpl with build3d_mol2 db2
+	- [x] docking to tgcpl with build3d38 db2
+- [x] test covalent docking with ketone covalent librariy dock3.8 
+	- [x] docking to tgcpl with build3d_mol2 db2
+	- [x] docking to tgcpl with build3d38 db2
 - [x] dock all enamine libs to 3 other hscpl (used dock37)
 - [x] add other warhead ligands-- get SMILES 
 - [x] continue pose analysis 
 #### Meetings
- - [ ] Matt Weekly (W)
- - [ ] Tools & Tech (Th)
- - [ ] BISTRO (Th)
- - [ ] MORE (Mentor Mentee Workshop F 11/17)
- - [ ] BGSA Friendsgiving (F)
- - [ ] PIBS 503 (F)
+ - [x] Matt Weekly (W)
+ - [x] Tools & Tech (Th)
+ - [x] BIOINF 602 Session (F)
+ - [x] MORE (Mentor Mentee Workshop F 11/17)
+ - [x] PIBS 503 (F)
 # Nov 22, 2023
-## Things discussed
 
-
-## To do 
+## To do by Wed
 #### HW 
-- [ ] BIOINF HW8 (Th 11/30)
-- [ ] BIOSTAT HW10 (Th)
-- [ ] BIOINF Project (Sun 11/26)
-- [ ] BIOINF recording
-	- [ ] BIOINF 500 HW
+- [x] BIOINF HW8 part 1 (due Th 11/30)
+- [ ] BIOSTAT HW10 --finish half (due Tu 11/28)
+- [ ] BIOINF Project Q5-6 (due Sun 11/26)
+- [x] BIOINF 500 HW
+- [x] go over BIOSTAT midterm 
+- [x] Rosetta JC Reading (https://www.biorxiv.org/content/10.1101/2023.11.03.565471)
+- [x] email maureen+margit 
+- [x] email biostat dept (Nicole) for tutor
 #### Research
 - [ ] continue pose analysis
 - [ ] filter chembl ligands for covalent only 
 - [ ] add chembl ligands after filtering for covalent to TgCPL Activities excel 
 - [ ] rebuild db2 gz files for martin ligands using tldr
+- [x] try rebuilding with pre Si atom library build3d38 
+	- [ ] dock with noncovalent docking dock38
+	- the input smiles file should only have smiles column 
+#### Meetings
+- [x] Meeting with Ananda (M)
+- [x] Meeting with Junkang (M)
+- [ ] Rosetta JC (W)
+- [ ] Bioinf Project (W)
+- [ ] BIOSTAT hw (?)

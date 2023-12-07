@@ -16,8 +16,8 @@ happening in: `/home/ymanasa/turbo/projects/TgCPL/docking/docking-campaigns/dock
 ***!! the ligand info is used for sampling but since we dont have a reference ligand for TgCPL, sampling might be slightly inaccurate !!***
 ![[1_make_structure_edits.png]]
 
-- To find out which covalent_residue_number to use in the `/home/ymanasa/turbo/projects/TgCPL/docking/docking-campaigns/docking_campaigns_local/prepared_structures/tgcpl_20230830/1_prepare_structure.sh `file:
-	- Open the target ligand (Toxoplasma CPL ***3F75***) in pymol and open a reference protein that is similar enough to the target that has a ligand in the crystal structure (CPK ***301G***-- got this from the excel sheet called TgCPL activities).
+- To find out which covalent_residue_number to use in the `/home/ymanasa/turbo/projects/TgCPL/docking/docking-campaigns/docking_campaigns_local/prepared_structures/tgcpl_20230830/1_prepare_structure.sh file:
+	- Open the target ligand (Toxoplasma CPL ***3F75***) in pymol and open a reference protein that is similar enough to the target that has a ligand in the crystal structure (CPK ***301G***-- got this from the excel sheet called TgCPL activities)
 	- Estimate where the ligand in 301G is in contact with residue in 3F75 to determine COVALENT_RESIDUE_NUMBER
 
 ![[pymol_ligand_contact_view.png]]
@@ -220,3 +220,4 @@ need to change scripts in `${DOCK_TEMPLATE}=/home/ymanasa/opt/dock_campaign_temp
 ## Submitting pull request for changed scripts to reflect how things should be run
 - since previous pull request was not resolved and closed, any new commits made on prepare_structure_fix branch is automatically added to previous pull request
 - the pull request can be updated manually on github
+

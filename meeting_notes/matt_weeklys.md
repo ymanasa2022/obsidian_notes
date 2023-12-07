@@ -683,27 +683,121 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
  - [x] PIBS 503 (F)
 # Nov 22, 2023
 
-## To do by Wed
+## To do
 #### HW 
 - [x] BIOINF HW8 part 1 (due Th 11/30)
-- [ ] BIOSTAT HW10 --finish half (due Tu 11/28)
-- [ ] BIOINF Project Q5-6 (due Sun 11/26)
+- [x] BIOSTAT HW10 finish some (due Tu 11/28)
+- [x] BIOINF Project Q5-6 (due Sun 11/26)
 - [x] BIOINF 500 HW
 - [x] go over BIOSTAT midterm 
 - [x] Rosetta JC Reading (https://www.biorxiv.org/content/10.1101/2023.11.03.565471)
 - [x] email maureen+margit 
 - [x] email biostat dept (Nicole) for tutor
-#### Research
-- [ ] continue pose analysis
-- [ ] filter chembl ligands for covalent only 
-- [ ] add chembl ligands after filtering for covalent to TgCPL Activities excel 
-- [ ] rebuild db2 gz files for martin ligands using tldr
-- [x] try rebuilding with pre Si atom library build3d38 
-	- [ ] dock with noncovalent docking dock38
-	- the input smiles file should only have smiles column 
 #### Meetings
 - [x] Meeting with Ananda (M)
 - [x] Meeting with Junkang (M)
-- [ ] Rosetta JC (W)
-- [ ] Bioinf Project (W)
-- [ ] BIOSTAT hw (?)
+- [x] Rosetta JC (W)
+- [x] Bioinf Project (W)
+# Nov 29, 2023
+## Things discussed 
+- debugging dock3.8 issue by running with Miguel's database ([[debugging_dock3.8]])
+	https://wiki.docking.org/index.php/SUBDOCK_DOCK3.8
+	[ReadError](https://python.readthedocs.io/en/latest/library/tarfile.html)
+	https://bugs.python.org/msg245839
+- TgCPL ligand activities data curation
+	- how to tell whether it was covalent docking? just by looking at the ligands?
+	- https://pubs.acs.org/doi/epdf/10.1021/jm00010a022
+	- https://pubs.acs.org/doi/10.1021/jm950760y
+- redo prep for toxo 
+	- align the hscpl to toxo cpl 
+	- use aligned pdb toxo cpl form pymol
+	- make xtal lig using ligand atoms in hscpl pdb for toxo cpl 
+	- check vdw mesh (use python2 script create_VDW_DX.py to make visual mesh)
+## To do
+#### HW 
+- [ ] BIOINF Project
+	- [x] Q5
+	- [x] Q6
+	- [x] Q7
+	- [ ] Q8
+
+- [ ] BIOINF HW
+	- [x] Q2 
+	- [x] Q3
+		- [x] a
+		- [ ] b
+		- [ ] c
+- [x] BIOSTAT HW
+	- [x] Q1
+		- [x] a
+		- [x] b
+		- [x] c
+	- [x] Q2
+	- [x] Q3
+		- [x] a
+		- [x] b
+		- [x] c
+	- [x] Q4
+	- [x] Q5
+		- [x] a
+		- [x] b
+		- [x] c
+	- [x] Q6
+		- [x] a
+		- [x] b
+	- [x] Q7
+		- [x] a
+		- [x] b
+		- [x] c
+		- [x] d
+- [x] BIOINF JC Formulate a Q
+#### Research
+- [x] continue pose analysis
+#### Meetings
+- [x] Meeting with Junkang (W) 
+- [x] BIOSTAT hw (M)
+- [x] BISTRO (Th)
+- [x] Tools and Tech (Th)
+- [x] Weekly w Matt (W)
+- [x] Med Chem seminar (Th)
+# Dec 6, 2023
+## Things discussed
+- Med Chem Seminar 
+	- Biotopic ligands 
+	- allosteric site and active site for toxo?
+	- screening for only biotopic ligands?
+- redo prep for toxo 
+	- partial manual prep (xtal-lig came from aligned hscpl structure 5MAJ)
+	- there is no HG in rec or lig?
+## To do 
+#### HW 
+- [ ] BIOINF Project (submit) 
+	- [x] Q7
+	- [x] Q8
+	- [x] individual write up 
+- [x] BIOINF HW
+- [ ] BIOSTAT HW
+- [ ] BIOINF 2nd project?
+- [x] Course Evals
+- [x] BIOINF 500 HW
+- [x] Make up PIBS assingment
+- [ ] setup meeting with Matt for last pibs discussion (by dec 8)
+#### Research 
+- [ ] filter chembl ligands for covalent only 
+- [ ] add chembl ligands after filtering for covalent to TgCPL Activities excel 
+- [ ] rebuild db2 gz files for martin ligands using tldr
+- [ ] try rebuilding with pre Si atom library build3d38 
+	- [ ] dock with noncovalent docking dock38
+	- the input smiles file should only have smiles column 
+- [ ] debug dock3.8 
+#### Meetings
+- [x] BIOINF Project meeting (F)
+- [ ] Weekly Meeting with Matt (W)
+- [ ] BIOSTAT HW meeting (W)
+
+# Winter Break
+- [ ] summarize semester findings in slides 
+- [ ] continue data curation 
+- [ ] AI with python 11 hour youtube
+- [ ] finalize weekly meetings 
+- [ ] UBC ovarian cancer subtype 

@@ -26,7 +26,7 @@ The rest of the google sheet are other cathepsins
 	- check if the same residue is involved in the drug docking
 
 - [[bender_2021]] suggests using high resolution structure for covalent docking
-	- the best one we have of HsCPL is 1CJL ![[1cjl_pymol_messed_up.png]]
+	-  one we have of HsCPL is 1CJL ![[1cjl_pymol_messed_up.png]]
 	- it doesnt have a ligand/propeptide bound to it. also looks like a mess
 	- can find what the reactive residue is using the other structures
 	- align and find same residue in PyMOL

@@ -61,3 +61,7 @@ COVALENT_RESIDUE_ATOMS=SG
 	- `export **DOCKEXEC=**${DOCKBASE}/docking/DOCK/dock64`
 - docking the unsub acrylamides db
 ![[same_tar_error.png]]
+
+# Testing
+- testing docking with marrisa's library that's known to work with dock3.8 
+	- non covalent docking but with tgcpl prepped for covalent docking 

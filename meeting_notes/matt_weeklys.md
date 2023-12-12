@@ -776,12 +776,12 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 	- [x] Q8
 	- [x] individual write up 
 - [x] BIOINF HW
-- [ ] BIOSTAT HW
-- [ ] BIOINF 2nd project?
+- [x] BIOSTAT HW
+- [x] BIOINF 2nd project
 - [x] Course Evals
 - [x] BIOINF 500 HW
 - [x] Make up PIBS assingment
-- [ ] setup meeting with Matt for last pibs discussion (by dec 8)
+- [x] setup meeting with Matt for last pibs discussion (by dec 8)
 #### Research 
 - [ ] filter chembl ligands for covalent only 
 - [ ] add chembl ligands after filtering for covalent to TgCPL Activities excel 
@@ -792,8 +792,8 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 - [ ] debug dock3.8 
 #### Meetings
 - [x] BIOINF Project meeting (F)
-- [ ] Weekly Meeting with Matt (W)
-- [ ] BIOSTAT HW meeting (W)
+- [ ] Weekly Meeting with Matt (F)
+- [x] BIOSTAT HW meeting (W)
 
 # Winter Break
 - [ ] summarize semester findings in slides 

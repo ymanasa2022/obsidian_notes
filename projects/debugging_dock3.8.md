@@ -23,3 +23,22 @@
 	- made these changes
 	![[dock_submit_changes.png]]
 	- change the path to dock_submit.sh in the 1_submit.sh script created for each dock run 
+
+# Debugging with Matt Dec 14, 2023 
+$DOCKBASE/ligand/generate/build_database_ligand.sh
+
+$DOCKBASE/ligand/generate/build_smiles_ligand.sh smiles.ism --covalent 
+- makes db2 from the smiles 
+	- takes in smiles
+	- generates solvation
+	- combines to make db2
+
+ $DOCKBASE/ligand/omega/omega_warhead.py 
+ - run 264084.0.O.mol2 with omega_warhead.py and then follow subsequent lines in $DOCKBASE/ligand/generate/build_smiles_ligand.sh and run them one at a time on the mol2
+- ~/turbo/opt/DOCK-dev/ucsfdock/ligand/generate/build_ligand_mol2.sh
+	- takes mol2 
+	- does stuff with omega 
+	- combines to make db2
+	- doesnt handle covalent but we can modify it to run covalent 
+
+

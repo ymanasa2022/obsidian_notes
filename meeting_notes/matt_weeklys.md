@@ -771,7 +771,7 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 	- there is no HG in rec or lig?
 ## To do 
 #### HW 
-- [ ] BIOINF Project (submit) 
+- [x] BIOINF Project (submit) 
 	- [x] Q7
 	- [x] Q8
 	- [x] individual write up 
@@ -783,21 +783,23 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 - [x] Make up PIBS assingment
 - [x] setup meeting with Matt for last pibs discussion (by dec 8)
 #### Research 
+- [ ] prediction of blood brain barrier crossing (martin's and tgcpl subs) 
 - [ ] filter chembl ligands for covalent only 
 - [ ] add chembl ligands after filtering for covalent to TgCPL Activities excel 
 - [ ] rebuild db2 gz files for martin ligands using tldr
-- [ ] try rebuilding with pre Si atom library build3d38 
-	- [ ] dock with noncovalent docking dock38
-	- the input smiles file should only have smiles column 
-- [ ] debug dock3.8 
+- [ ] redock using 3.8
 #### Meetings
 - [x] BIOINF Project meeting (F)
-- [ ] Weekly Meeting with Matt (F)
+- [x] Weekly Meeting with Matt (F)
 - [x] BIOSTAT HW meeting (W)
 
 # Winter Break
+- [x] TLDR covalent docking dev
+- [ ] BBB predictions
+- [ ] redock using 3.8
+	- [ ] fix dock3.8
 - [ ] summarize semester findings in slides 
 - [ ] continue data curation 
 - [ ] AI with python 11 hour youtube
 - [ ] finalize weekly meetings 
-- [ ] UBC ovarian cancer subtype 
+- [ ] UBC ovarian cancer subtype Kaggle

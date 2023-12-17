@@ -1,11 +1,11 @@
 # Step 1: adding Si to covalent bond point 
-`/home/ymanasa/turbo/CovalentLibs/martin_cdd/martin_cdd_09132023`.ism
-- created a `.ism` file with SMILES given by Martin on Sep 13, 2023 (also in CDD Vault)
-- example `.ism`:  `/home/ymanasa/turbo/CovalentLibs/unsubstituted-acrylamides/fragments/smiles/unsub.frag.acrylamides.ism`
+`/home/ymanasa/turbo/CovalentLibs/martin_cdd/martin_cdd_09132023`.smi
+- created a `.smi` file with SMILES given by Martin on Sep 13, 2023 (also in CDD Vault)
+- example `.smi`:  `/home/ymanasa/turbo/CovalentLibs/unsubstituted-acrylamides/fragments/smiles/unsub.frag.acrylamides.smi`
 - script to run for `Si` replacement: `/home/ymanasa/turbo/CovalentLibs/scripts/
 - created `martin_cdd_09132023.ism` in `/home/ymanasa/turbo/CovalentLibs/martin_cdd`
-	- used columns C D to create tab spaced file `martin_cdd_09132023.ism` 
-	- use one of the `heterocyclic-nitrile.py` files to convert the nitril groups in all the SMILES in `martin_cdd_09132023.ism`
+	- used columns C D to create tab spaced file `martin_cdd_09132023.smi` 
+	- use one of the `heterocyclic-nitrile.py` files to convert the nitril groups in all the SMILES in `martin_cdd_09132023.smi`
 	- look at line 19 SMIRKS reaction in smarts.plus 
 ![[heterocyclic-nitril.png]]
 

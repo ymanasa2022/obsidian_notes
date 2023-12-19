@@ -76,5 +76,7 @@ accurate prediction of diverse molecular endpoints, such as physico-chemical pro
 necessitating the integration of heterogeneous data sources and diverse molecular descriptors
 
 researchers have turned to innovative approaches that leverage the power of ensemble methods and feature fusion technique
-
+#### gap2
+dealing with small datasets
+B.Dou et al. [33]discussed machine learning methods for small data challenges and offered several suggestions for improving the prediction power of ML/DL models w.r.t. small data sets including the combination of ML and DL models.
 

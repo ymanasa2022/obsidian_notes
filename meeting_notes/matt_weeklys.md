@@ -793,6 +793,33 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 - [x] Weekly Meeting with Matt (F)
 - [x] BIOSTAT HW meeting (W)
 
+
+# Dec 18, 2023 
+## Things discussed
+
+- Pull datasets from the papers 
+	- [x] Martin 2012
+	- [x] Meng 2021
+	- [ ] Nishanth 2023
+	- find sets of compounds in these datasets 
+	- test train split (see if they come with partitions)
+	- how similar are these to our compounds?
+		- MPLearn package
+		- MPLearn/bin/feature_substances -> can pass a smi and which type of fingerprint you want, it will produce fingerprints in a file (parquet file kind of like a pickle file)
+		- Molecule embedding notebook (google collaboration—shows how to install MPLearn package), molecule_embeddings -> takes a set of smiles, will create an embedding of the compounds and you can label different sets and it will show the molecules 
+		- Can then directly embed them using embed script or can do similarly search using library_search 
+		- Web2023 file for collab notebook. Doesn’t do similarity search
+
+- [x] Clean up TgCLP activities (take out doubles, clean up names, make sure each SMILES has a unique identifier) 
+	- Fill out data resources tab (include path to spreadsheet) 
+	- Make smiles+id file with all our compounds 
+
+- Get Lantern RADR Ensemble to work
+
+- Covalent Ligands Literature Data Curation
+	- Potent, reactive
+	- Minutes on assay (20 min and has activity is not covalent, 2 day assay has activity is covalent, washout experiments are covalent)
+
 # Winter Break
 - [x] TLDR covalent docking dev
 - [ ] BBB predictions
@@ -802,4 +829,3 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 - [ ] continue data curation 
 - [ ] AI with python 11 hour youtube
 - [ ] finalize weekly meetings 
-- [ ] UBC ovarian cancer subtype Kaggle

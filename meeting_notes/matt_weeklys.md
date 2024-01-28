@@ -216,6 +216,10 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 		2. do visual manipulations to make one pdb transparent and the other not 
 		3. make sure you can visualize the original drug ligand in the protein pocket
 		4. load the poses.mol2 file that come from after processing the docking results on greatlakes 
+			1. tools -> Sufarce/Binding Analysis -> ViewDock -> Dock 3 or 3.5
+				1. column -> total energy 
+				2. start with all compounds to Deleted 
+			2. Can use Tools -> General Analysis -> Model Panel to hide extra molecules 
 		5. use visual analysis to decide which ligands to keep and which ones to discard 
 - work on the grant 
 	- email Dr. Uhler-- probably meet up with him 
@@ -800,7 +804,7 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 - Pull datasets from the papers 
 	- [x] Martin 2012
 	- [x] Meng 2021
-	- [ ] Nishanth 2023
+	- Nishanth 2023
 	- find sets of compounds in these datasets 
 	- test train split (see if they come with partitions)
 	- how similar are these to our compounds?
@@ -809,12 +813,13 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 		- Molecule embedding notebook (google collaboration—shows how to install MPLearn package), molecule_embeddings -> takes a set of smiles, will create an embedding of the compounds and you can label different sets and it will show the molecules 
 		- Can then directly embed them using embed script or can do similarly search using library_search 
 		- Web2023 file for collab notebook. Doesn’t do similarity search
+	- want to show that the training set is representative of the predictions ligands 
 
 - [x] Clean up TgCLP activities (take out doubles, clean up names, make sure each SMILES has a unique identifier) 
-	- Fill out data resources tab (include path to spreadsheet) 
-	- Make smiles+id file with all our compounds 
+	- [x] Fill out data resources tab (include path to spreadsheet) 
+	- [x] Make smiles+id file with all our compounds 
 
-- Get Lantern RADR Ensemble to work
+- [x] Get Lantern RADR Ensemble to work
 
 - Covalent Ligands Literature Data Curation
 	- Potent, reactive
@@ -822,10 +827,136 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 
 # Winter Break
 - [x] TLDR covalent docking dev
-- [ ] BBB predictions
-- [ ] redock using 3.8
-	- [ ] fix dock3.8
+- [ ] BBB predictions (mostly Hai is working on this)
+- [ ] fix dock3.8
+	- [ ] redock using 3.8
 - [ ] summarize semester findings in slides 
 - [ ] continue data curation 
-- [ ] AI with python 11 hour youtube
-- [ ] finalize weekly meetings 
+	- Dihydrofolate Reductase Inhibitors ?
+	- how to tell covalent or not? dont know
+- [x] finalize weekly meetings 
+
+# Jan 08, 2024
+
+## To do 
+#### HW
+- 529
+- [x] greatlakes setup
+
+#### Research
+
+- [x] send write up for SARS ligands docking 
+	- DiffDock sampling- 6 carbon chain cannot reach-- tested 3 and 5 as well 
+	- too long of a chain would create too many degrees of freedom
+	- adding double bonds to make it rigid will make it hydrophobic and hard to experimentally test 
+	- do we really want to retain the HIS interaction with the ribose ring? 
+		- what residues was my initial ligand interacting with?
+	- [x] get docking results
+- [x] JC reading (F)
+- [ ] Presentation Prep (2F)
+
+#### Meetings 
+- [x] Meeting with Hai (T)
+- [x] Weekly with Matt (F)
+- [x] Michigan Modeling (F)
+- [x] Lab Meeting (F)
+
+# Jan 15, 2024
+#### HW
+- 529
+	- [x] Class 2 Video (T)
+		- Class 2 Quiz 
+	- [x] Class 3 Video (Th)
+		- Class 3 Quiz
+	- [ ] practice set 1 
+	- [ ] practice set 2
+- 426 
+	- [x] HW 0
+- Presentation 
+	- [x] make presentation draft
+	- [x] make final presentation
+	- [x] practice presentation 
+#### Research 
+- [x] BBB Predictions
+	- [x] ask Hai for whatever predictions he has, dont need CFA, Maplight is enough 
+	- [x] create a email with what we did, and the predictions for the ligands that are in the grant 
+- [ ] SARS docking
+	- redock with Magnesium ?
+	- is there a way to only edit GDP as it is in the binding site and evaluate binding affinity to RdRp 
+	- [x] email Lydia
+		- set up meeting with Matt 
+		- in theory we dont think the molecules will reach the residues of interest 
+		- might need deeper modeling 
+- [ ] DOCK3.8
+	- [ ] do protonation states calculations ourselves (open source repo in slack)
+	- [x] email tldr- check in with them for timeline with them (Kahn)
+	- [ ] joining IC50 values where available from CDDValue etc
+ 
+ #### Meetings 
+- [x] With Hai (S 4pm)
+- [x] With Matt and Miguel (M 10am)
+- [x] Diffusion Model Rosetta (W 11am)
+- [x] Tools & Tech (Th 12pm)
+- [x] Lab Meeting (F 11am)
+
+# Jan 22, 2024
+ 
+- [x] Similarity search
+	- fingerprint generation using Collab Notebook 
+	- similarity search using MPLearn 
+	- create a table of overlapping similar compounds 
+	- look at some BBB+ predicted compounds and see how similar they are to the BBB+ compounds in the training set 
+	- can also add the experimental ligands to the UMAP and cluster based on SMILES instead of BBB+/- 
+- [x] SARS docking
+	- redock with Magnesium ?
+	- is there a way to only edit GDP as it is in the binding site and evaluate binding affinity to RdRp 
+	- [x] email Lydia
+		- set up meeting with Matt 
+		- in theory we dont think the molecules will reach the residues of interest 
+		- might need deeper modeling 
+- [ ] DOCK3.8
+	- [ ] do protonation states calculations ourselves (open source repo in slack)
+	- [x] email tldr- check in with them for timeline with them (Kahn)
+	- [ ] joining IC50 and selectivity values where available from CDDVaut
+		- i put IC50 values are in enzyme activity assay subsheet in tgcpl activities
+		- put all the various property values (CDD valut) into substances sub spread sheet?
+		- bring BBB values into tgcpl activities spread sheet? 
+		- add vern's comments against ligands?
+		- how do we denote which ligands are out of the running?
+#### HW
+ - Girls who Code
+	- [x] code of conduct
+	- [x] safety
+- 529
+	- [x] Class 3 Video (T)
+		- Class 3 Quiz 
+	- [x] Class 4 Video (Th)
+		- Class 4 Quiz
+	- [x] practice set 2
+	- [ ] practice set 3
+	- [ ] practice set 4
+- [x] fill dental appt forms
+#### Meetings
+- [x] Matt Miguel Weekly
+- [x] DrugMap potential collab meeting (W 9:30am)
+- [x] Hanrui Zhang Difense (Th 2pm)
+	- Predict drug response by machine learning
+	- ZOOM: [https://umich.zoom.us/j/92062188386](https://umich.zoom.us/j/92062188386) [Passcode: 000]
+# Jan 29, 2024
+#### Research 
+- [ ] DOCK3.8 
+	- added scrubber (takes any ph_low/ph_high)
+	- added rdkit 3D embedding step 
+		- doesnt work without adding Hydrogens. makes mol2 files for each protomer, wouldnt that be the same for every protomer if we just add hydrogens?
+#### HW
+- 426
+	- [ ] HW 1 (due next T)
+- 529 
+	- [ ] practice set 4
+	- [ ] practice set 5
+	- [ ] practice set 6
+	- [ ] Class 5 Video/Quiz
+	- [ ] Class 6 Video/Quiz
+#### Meetings
+- [ ] Girls Who Code Onboarding
+- [ ] 

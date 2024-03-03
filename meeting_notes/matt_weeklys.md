@@ -944,19 +944,144 @@ A week is normally from Wednesday to Wednesday due to weekly one-on-ones
 	- ZOOM: [https://umich.zoom.us/j/92062188386](https://umich.zoom.us/j/92062188386) [Passcode: 000]
 # Jan 29, 2024
 #### Research 
-- [ ] DOCK3.8 
+- [x] DOCK3.8 
 	- added scrubber (takes any ph_low/ph_high)
 	- added rdkit 3D embedding step 
 		- doesnt work without adding Hydrogens. makes mol2 files for each protomer, wouldnt that be the same for every protomer if we just add hydrogens?
+		- just use tldr output of martin's compounds to run through omega.py?
 #### HW
 - 426
-	- [ ] HW 1 (due next T)
+	- [x] HW 1 (due next T 2/8)
 - 529 
 	- [ ] practice set 4
 	- [ ] practice set 5
 	- [ ] practice set 6
-	- [ ] Class 5 Video/Quiz
-	- [ ] Class 6 Video/Quiz
+	- [x] Class 5 Video/Quiz
+	- [x] Class 6 Video/Quiz
 #### Meetings
-- [ ] Girls Who Code Onboarding
-- [ ] 
+- [x] Girls Who Code Onboarding
+	- 6:30pm to 8pm every Tuesday 
+	- once a month commitment
+- [x] Matt Miguel Weekly
+- [x] Diffusion Model Reading Group 
+# Feb 5, 2024
+#### HW
+- 426
+	- [x] HW2 (T)
+- 529 
+	- [x] set 4
+	- [x] 5
+	- [x] 6
+	- [x] HW1 (Th)
+		- [x] fxn1
+		- [x] fxn2
+		- [x] fxn3
+		- [x] fxn4
+		- [x] fxn5
+	- [x] writeup for HW1 (Th)
+#### Research 
+- [x] DOCK3.8
+	- line by line testing in build_smiles_ligand.sh 
+	- calc_solvation.csh works on a mol2 file from tldr run 
+		- got openbabel to work for mol2 to mopin conversion 
+		- amsol had similar issues-- figured that i need to `module load pgi/20.4`
+	- omega_warhead.py works and gives a `.db2in.mol2` file that then needs to get converted into `.db2.gz` file for dock3.8 
+	- BUT shortcut? 
+		- everything above may not be needed, and directly maybe I can convert the mol2 and solv files from tldr into db2.gz files and see if that works for covalent dock3.8?
+			- this wont work most likely since `.mol2` from tldr did not go through omega_warhead.py
+		- `$DOCKBASE/ligand/mol2db/mol2db $DOCKBASE/ligand/mol2db/data/inhie`r combines .mol2 and .solv file to create .db2 file
+			- where does solv file come from????
+			- tried combining JRH-10-3P.0.N.solv and JRH-10-3P.0.N.mol2 
+
+# Feb 12, 2024
+## Things Discussed
+- Matt continuing to debug dock3.8 
+	- ran into SMARTS issues
+- continue developing ideas around predicting durability 
+	- cys residue drugability/ligandability prediction 
+- read other papers Matt suggested
+	- Candida auris stuff
+#### HW
+- 426
+	- [x] HW3 (T)
+- 529 
+	- [x] class 7
+	- [x] class 8 
+	- [x] quiz 9 (T)
+	- [x] quiz 10 (Th)
+#### Research 
+- [x] Debug dock3.8
+	- [x] Dock Martin's compounds
+	- [x] write writeup
+- [x] Data Curation
+- [x] Read for next project
+#### Meetings
+- [x] Weekly Matt + Miguel (M)
+- [x] Rosetta JC (W)
+- [x] Girls Who Code (T)
+- [x] Seminar (Th)
+
+# Feb 19, 2024
+#### HW
+- 426 
+	- [x] HW 4
+	- [x] make exam 1 cheat sheet
+	- [x] practice exam 
+	- [x] exam 1
+- 529 
+	- [x] Quiz 11
+	- [x] Quiz 12
+#### Research 
+- [ ] Read on Canadida auris
+- [ ] Read on drugability of cysteine prediction 
+- [x] continue data curation 
+
+# Feb 26, 2024
+## Things discussed
+- Potential project:
+1. *Auris* Drug Targets (DrAG)
+	 - Update the database 
+	 - Gene function prediction
+2. Covalent Targeting in *Auris*
+	- Teresa's lab working on Co-expression data 
+		- not a lot of RNA seq info in literature so they're making their own db of info
+		- seq-well: mutants vs conditions matrix -> sequence and measure gene expression -> increased expression of two or more genes for the same condition indicates essentiality  (coexpression)
+	- identify cys targets using existing predictors 
+	- perform DrugMap on *Auris*
+3. Develop Deep Learning Model for Covalent Docking
+	- Diffusion in Covalent Docking
+	- LoRA from LLM can be applied to last K steps in diffDock 
+4. Drug Campaign
+	- pick targets
+	- do screens
+	- test
+#### HW 
+- 529 
+	- [x] watch class 10 implementation 
+	- [x] watch class 11 implementation  
+	- [ ] fxn1
+	- [x] fxn2
+	- [x] fxn3
+	- [x] fxn4
+	- [ ] fxn5
+	- [ ] watch class 12 implementation (3 vids)
+#### Research
+- [x] Look into diffusion in Covalent docking specifically
+- [x] data curation
+- [ ] make list of current cys drugability predictors 
+- [x] explore cys drugability prediction with sequence info
+- [x] check status on cys pred: still running
+- Testing cystiene prediction of efg1 (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8980467/) and cdr1 (https://journals.asm.org/doi/10.1128/msphere.01318-20)
+- Structure
+	- Cdr1: Using alpha fold prediction
+	- Efg1: Going to remodel efg1 using disaster-af2(seq from: http://www.candidagenome.org/cgi-bin/protein/proteinPage.pl?dbid=CAL0000201973&seq_source=C.%20albicans%20SC5314%20Assembly%2022) 
+		- (Running 2/23-- took out ' * ' at end of seq) 
+
+- Function Pred: Get function pred, ligand binding site pred COFACTOR 
+	- Cdr1 (running 2/23) 
+	- Efr1 (waiting for structure pred)
+	
+- Cys Pred: using deep cys server (Ruibin Liu et al, 2023) 
+	- Cdr1 (running 2/23)
+	- Efr1 (can run once we have sturcture)
+ 
